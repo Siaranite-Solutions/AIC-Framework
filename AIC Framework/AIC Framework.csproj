@@ -13,5 +13,10 @@
     <PackageReference Include="Cosmos.Debug.Kernel" Version="*" />
     <PackageReference Include="Cosmos.System2" Version="*" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\AIC.Core\AIC.Core.csproj" />
+    <ProjectReference Include="..\AICFramework.Hardware\AIC.Hardware.csproj" />
+  </ItemGroup>
 
 </Project>

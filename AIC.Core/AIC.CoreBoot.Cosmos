@@ -27,9 +27,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include=".\AIC Framework.csproj">
-      <Name>AIC Framework</Name>
-      <Project>{cbae884b-71bb-419a-a3ed-6eafa8e0f440}</Project>
+    <ProjectReference Include=".\AIC.Core.csproj">
+      <Name>AIC.Core</Name>
+      <Project>{1c206f41-a435-44d7-8794-8754bf3e2fb5}</Project>
     </ProjectReference>
   </ItemGroup>
 
