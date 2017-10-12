@@ -26,40 +26,23 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using AIC.Core.IO;
 // Splitty was here
+/*
 namespace AIC_Framework.IO
 {
-    public unsafe class MemoryStream : Stream
+    public class MemoryStream
     {
-        private bool eof;
-        public bool EOF { get { return eof; } }
-        private byte* data;
+        
+        public bool EOF { get { return AIC.Core.IO.MemoryStream.eof; } }
+        
         private uint length;
-        public MemoryStream(byte* dat)
+        public MemoryStream(byte dat)
         {
-            eof = false;
-            length = sizeof(uint);
-            data = dat;
-        }
-        public MemoryStream(byte[] dat)
-        {
-            eof = false;
-            length = (uint)dat.Length;
-            fixed (byte* ptr = dat)
-            {
-                data = ptr;
-            }
-        }
-        internal override byte ReadByte(uint p)
-        {
-            if (p > length) eof = true; else eof = false;
-            if (!eof) return data[p];
-            else return byte.MinValue;
-        }
-        internal override void WriteByte(uint p, byte b)
-        {
-            if (p > length) eof = true; else eof = false;
-            if (!eof) data[p] = b;
+            AIC.Core.IO.MemoryStream.eof = false;
+            AIC.Core.IO.MemoryStream.length = sizeof(uint);
+            AIC.Core.IO.MemoryStream.data = dat;
         }
     }
 }
+*/

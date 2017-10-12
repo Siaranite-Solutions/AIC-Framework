@@ -26,7 +26,7 @@ using System;
 using System.Collections.Generic;
 using C = AIC.Core.IO.PortIO;
 
-namespace AIC_Framework.dev
+namespace AIC.Core.dev
 {
     public static class ATAPI
     {
@@ -74,13 +74,9 @@ namespace AIC_Framework.dev
             C.inb(ATA_DCR);
         }
 
-        internal unsafe static int atapi_drive_read_sector(UInt32 bus, UInt32 drive, UInt32 lba, byte* buffer)
-        {
-            return AIC.Core.dev.ATAPI.atapi_drive_read_sector(bus, drive, lba, buffer);
-        }
         /* Use the ATAPI protocol to read a single sector from the given
-         * * bus/drive into the buffer using logical block address lba. 
-        /*internal static unsafe int atapi_drive_read_sector(UInt32 bus, UInt32 drive, UInt32 lba, byte* buffer)
+         * * bus/drive into the buffer using logical block address lba. */
+        public static unsafe int atapi_drive_read_sector(UInt32 bus, UInt32 drive, UInt32 lba, byte* buffer)
         {
             // 0xA8 is READ SECTORS command byte
             ushort[] read_cmd = new ushort[12] { 0xA8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -145,14 +141,15 @@ namespace AIC_Framework.dev
             // schedule(); // HAS SOMETHING TO DO WITH IRQ.. xD ////////////
             ////////////////////////////////////////////////////////////////
 
-            /* Wait for BSY and DRQ to clear, indicating Command Finished 
+            /* Wait for BSY and DRQ to clear, indicating Command Finished */
             // while ((status = inb (ATA_COMMAND (bus))) & 0x88)
             while (((status = C.inb(ATA_COMMAND)) & 0x88) == 0) {;}
 
             cleanup:
-                /* Exit the ATA subsystem 
+                /* Exit the ATA subsystem */
                 // ata_release(); // ATA RELEASE? WTF!!
 
-            return size;*/
+            return size;
         }
+    }
 }

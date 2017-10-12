@@ -29,52 +29,27 @@ using AIC.Core;
 
 namespace AIC_Framework
 {
-    public static unsafe class Memory
+    public static class Memory
     {
         public static void MemAlloc(uint length)
         {
-            Heap.MemAlloc(length);
+            AIC.Core.Memory.MemAlloc(length);
         }
-        public static unsafe void MemRemove(byte start, uint offset, uint length)
+        public static void MemRemove(byte start, uint offset, uint length)
         {
-            if (offset >= length) return;
-            byte* ptr = (byte*)start;
-            for (uint i = offset; i < offset + length; i++ )
-            {
-                ptr[i] = (byte)0;
-            }
+            AIC.Core.Memory.MemRemove(start, offset, length);
         }
-        public static unsafe void MemCopy(byte source, byte destination, uint offset, uint length)
+        public static void MemCopy(byte source, byte destination, uint offset, uint length)
         {
-            if (offset >= length) return;
-            byte* src = (byte*)source;
-            byte* dst = (byte*)destination;
-            for (uint i = offset; i < offset + length; i++)
-            {
-                dst[i] = src[i];
-            }
+            AIC.Core.Memory.MemCopy(source, destination, offset, length);
         }
-        public static unsafe void MemMove(byte source, byte destination, uint offset, uint length)
+        public static void MemMove(byte source, byte destination, uint offset, uint length)
         {
-            if (offset >= length) return;
-            byte* src = (byte*)source;
-            byte* dst = (byte*)destination;
-            for (uint i = offset; i < offset + length; i++)
-            {
-                dst[i] = src[i];
-                src[i] = 0;
-            }
+            AIC.Core.Memory.MemMove(source, destination, offset, length);
         }
-        public static unsafe bool MemCompare(byte source1, byte source2, uint offset, uint length)
+        public static  bool MemCompare(byte source1, byte source2, uint offset, uint length)
         {
-            if (offset >= length) return false;
-            byte* ptr1 = (byte*)source1;
-            byte* ptr2 = (byte*)source2;
-            for (uint i = offset; i < offset + length; i++)
-            {
-                if (ptr1[i] != ptr2[i]) return false;
-            }
-            return true;
+            return AIC.Core.Memory.MemCompare(source1, source2, offset, length);
         }
     }
 }

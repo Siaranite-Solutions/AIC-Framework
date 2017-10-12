@@ -20,7 +20,7 @@ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVI
 DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
 IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+
 
 using System;
 using System.Collections.Generic;
@@ -29,7 +29,7 @@ using System.Collections.Generic;
 // Splitty: I will try it later =)
 namespace AIC_Framework.IO
 {
-    public unsafe class VideoStream
+    public class VideoStream
     {
         private MemoryStream stream;
         public VideoStream()
@@ -46,3 +46,4 @@ namespace AIC_Framework.IO
         }
     }
 }
+*/

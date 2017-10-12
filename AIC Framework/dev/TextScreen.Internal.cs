@@ -26,6 +26,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using AIC.Core.dev;
 using C = AIC.Core.IO.PortIO;
 
 namespace AIC_Framework.dev
@@ -53,16 +54,9 @@ namespace AIC_Framework.dev
             Yellow = 0xE,
             White = 0xF
         }
-        public static unsafe void PrintChar(char chr, int x, int y)
+        public static void PrintChar(char chr, int x, int y)
         {
-            //int* port = (int*)0xB8000;
-            //port += (int)(((byte)color << 8) | chr);
-            byte* address = (byte*)0xB8000;
-            int position = (y * 80) + x;
-            address[position] = (byte)chr;
-            address[++position] = (byte)((uint)(Foreground) | ((uint)(Background) << 4));
-            if (x < 80) { X = x; X++; }
-            else { X = 0; Y = y; Y++; }
+            AIC.Core.dev.TextScreen.PrintChar(chr, x, y);
         }
         internal static int GetOffset(int X, int Y)
         {

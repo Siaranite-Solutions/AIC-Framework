@@ -29,7 +29,7 @@ namespace AIC_Framework
 {
     public unsafe static partial class AConsole
     {
-        public unsafe static class VideoRAM
+        public static class VideoRAM
         {
             internal class VideoBuffer
             {
