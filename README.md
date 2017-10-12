@@ -5,7 +5,7 @@ This framework is a framework of components used in Apollo operating systems: th
 This framework allows a base of common tools to be used within the operating systems, allowing for easier manageability and changing of components in the future when needed.
 
 
-##AIC Framework Keyfeatures
+## AIC Framework Keyfeatures
 
 The most advanced Console class for Cosmos
 Advanced PIT
