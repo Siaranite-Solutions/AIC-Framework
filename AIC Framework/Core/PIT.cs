@@ -23,7 +23,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 using System;
-using dewitcher2;
+using AIC_Framework;
 using AIC.Core;
 using IO = AIC.Core.IO;
 

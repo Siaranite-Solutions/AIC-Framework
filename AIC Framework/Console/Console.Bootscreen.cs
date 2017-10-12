@@ -31,61 +31,61 @@ namespace AIC_Framework
     {
         public enum Effect : byte
         { SlideFromLeft, SlideFromRight, SlideFromTop, SlideFromBottom, Typewriter, Matrix }
-        public static void Show(string OSname, Effect efx, ConsoleColor color, int ms_sleep = 20)
+        public static void Show(string OSname, Effect efx, ConsoleColor color, int ms_sleep)
         {
             if (ms_sleep % 2 == 1) ms_sleep++;
             switch (efx)
             {
                 case Effect.SlideFromLeft:
 
-                    for (int i = 0; i < ((Console.WindowWidth / 2) - (OSname.Length / 2)); i++)
+                    for (int i = 0; i < ((AConsole.WindowWidth / 2) - (OSname.Length / 2)); i++)
                     {
-                        Console.Clear();
-                        Console.CursorLeft = i;
+                        AConsole.Clear();
+                        AConsole.CursorLeft = i;
                         string fill = "";
                         for (int x = 0; x < i; x++) fill += " ";
-                        Console.Write(fill);
-                        Console.Write(OSname, color, false, true);
+                        AConsole.Write(fill);
+                        AConsole.Write(OSname, color, false, true);
                         AIC.Core.PIT.SleepMilliseconds((uint)ms_sleep);
                     } break;
 
                 case Effect.SlideFromRight:
 
-                    for (int i = (Console.WindowWidth - OSname.Length);
-                        i > ((Console.WindowWidth / 2) - (OSname.Length / 2)); i--)
+                    for (int i = (AConsole.WindowWidth - OSname.Length);
+                        i > ((AConsole.WindowWidth / 2) - (OSname.Length / 2)); i--)
                     {
-                        Console.Clear();
-                        Console.CursorLeft = i;
-                        Console.Write(OSname, color, false, true);
+                        AConsole.Clear();
+                        AConsole.CursorLeft = i;
+                        AConsole.Write(OSname, color, false, true);
                         AIC.Core.PIT.SleepMilliseconds((uint)ms_sleep);
                     } break;
 
                 case Effect.SlideFromTop:
 
-                    for (int i = 0; i < (Console.WindowHeight / 2); i++)
+                    for (int i = 0; i < (AConsole.WindowHeight / 2); i++)
                     {
-                        Console.Clear();
-                        Console.CursorTop = i;
-                        Console.WriteLine(OSname, color, true, false);
+                        AConsole.Clear();
+                        AConsole.CursorTop = i;
+                        AConsole.WriteLine(OSname, color, true, false);
                         AIC.Core.PIT.SleepMilliseconds((uint)ms_sleep);
                     } break;
 
                 case Effect.SlideFromBottom:
 
-                    for (int i = (Console.WindowHeight - 1); i > (Console.WindowHeight / 2); i--)
+                    for (int i = (AConsole.WindowHeight - 1); i > (AConsole.WindowHeight / 2); i--)
                     {
-                        Console.Clear();
-                        Console.CursorTop = i;
-                        Console.WriteLine(OSname, color, true, false);
+                        AConsole.Clear();
+                        AConsole.CursorTop = i;
+                        AConsole.WriteLine(OSname, color, true, false);
                         AIC.Core.PIT.SleepMilliseconds((uint)ms_sleep);
                     } break;
 
                 case Effect.Typewriter:
 
-                    Console.CursorLeft = ((Console.WindowWidth / 2) - (OSname.Length / 2));
+                    AConsole.CursorLeft = ((AConsole.WindowWidth / 2) - (OSname.Length / 2));
                     foreach (char chr in OSname)
                     {
-                        Console.Write(chr.ToString(), color, false, true);
+                        AConsole.Write(chr.ToString(), color, false, true);
                         AIC.Core.PIT.SleepMilliseconds((uint)ms_sleep);
                     } break;
 
@@ -104,20 +104,20 @@ namespace AIC_Framework
                     int tmrx = 0;
                     for (int i = 0; i < 10; i++)
                     {
-                        for (int ih = 0; ih < Console.WindowHeight; ih++)
+                        for (int ih = 0; ih < AConsole.WindowHeight; ih++)
                         {
-                            for (int iw = 0; iw < Console.WindowWidth; iw++)
+                            for (int iw = 0; iw < AConsole.WindowWidth; iw++)
                             {
                                 if (tmr == 11) tmr = 0;
                                 if (tmrx == 4) tmrx = 0;
                                 tmr++;
-                                if (tmr == 0) Console.Write("#", ConsoleColor.Magenta);
-                                if (tmrx == 3) Console.Write("*", ConsoleColor.Green);
-                                if (tmr == 2) { Console.Write(";", ConsoleColor.Red); ++tmrx; }
-                                if (tmrx == 1) Console.Write("+", ConsoleColor.Yellow);
-                                if (tmr == 4) { Console.Write("~", ConsoleColor.Blue); ++tmrx; }
-                                if (tmrx == 2) Console.Write("&", ConsoleColor.Cyan);
-                                Console.Write(OSname, ConsoleColor.White, true, true);
+                                if (tmr == 0) AConsole.Write("#", ConsoleColor.Magenta);
+                                if (tmrx == 3) AConsole.Write("*", ConsoleColor.Green);
+                                if (tmr == 2) { AConsole.Write(";", ConsoleColor.Red); ++tmrx; }
+                                if (tmrx == 1) AConsole.Write("+", ConsoleColor.Yellow);
+                                if (tmr == 4) { AConsole.Write("~", ConsoleColor.Blue); ++tmrx; }
+                                if (tmrx == 2) AConsole.Write("&", ConsoleColor.Cyan);
+                                AConsole.Write(OSname, ConsoleColor.White, true, true);
                             }
                         }
                     } break;

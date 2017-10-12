@@ -67,8 +67,8 @@ namespace AIC.Hardware
         }
         private static void AddKey(uint p, char p_2, Cosmos.System.ConsoleKeyEx p_3)
         {
-            keys.Add(new Cosmos.System.KeyMapping(p, p_2, p_3));
-            KeyCount += 1u;
+            //keys.Add(new Cosmos.System.KeyMapping(p, p_2, p_3));
+            //KeyCount += 1u;
         }
         private static void AddKeyWithShift(uint p, char p_2, Cosmos.System.ConsoleKeyEx p_3)
         {
@@ -217,7 +217,7 @@ namespace AIC.Hardware
             AddKeyWithShift(78u, '+', Cosmos.System.ConsoleKeyEx.NumPlus);
             AddKeyWithShift(55u, '*', Cosmos.System.ConsoleKeyEx.NumMultiply);
             #endregion
-            ChangeKeyMap();
+            //ChangeKeyMap();
         }
 
         /// <summary>
@@ -373,7 +373,7 @@ namespace AIC.Hardware
             // Other keys
             AddKeyWithShift(76u, '5', Cosmos.System.ConsoleKeyEx.Num5);
             #endregion
-            ChangeKeyMap();
+            //ChangeKeyMap();
         }
 
         public static void AZERTY()
@@ -526,7 +526,7 @@ namespace AIC.Hardware
             // Other keys
             AddKeyWithShift(76u, '5', Cosmos.System.ConsoleKeyEx.Num5);
             #endregion
-            ChangeKeyMap();
+            //ChangeKeyMap();
         }
     }
 }

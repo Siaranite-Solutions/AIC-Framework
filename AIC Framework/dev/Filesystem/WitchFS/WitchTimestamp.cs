@@ -27,7 +27,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace dewitcher.dev.Filesystem.WitchFS
+namespace AIC_Framework.dev.Filesystem.WitchFS
 {
     public static class WitchTimestamp
     {

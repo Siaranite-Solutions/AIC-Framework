@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIC Framework", "AIC Framework\AIC Framework.csproj", "{CBAE884B-71BB-419A-A3ED-6EAFA8E0F440}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIC Framework", "AIC Framework\AIC Framework.csproj", "{CBAE884B-71BB-419A-A3ED-6EAFA8E0F440}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIC.Hardware", "AICFramework.Hardware\AIC.Hardware.csproj", "{F0D2D6B0-C249-4C38-B0C3-6AC83D29BAE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIC.Hardware", "AICFramework.Hardware\AIC.Hardware.csproj", "{F0D2D6B0-C249-4C38-B0C3-6AC83D29BAE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIC.Core", "AIC.Core\AIC.Core.csproj", "{1C206F41-A435-44D7-8794-8754BF3E2FB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIC.Core", "AIC.Core\AIC.Core.csproj", "{1C206F41-A435-44D7-8794-8754BF3E2FB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -27,6 +27,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 // Splitty was here
+/*
 namespace AIC.Core.IO
 {
     public unsafe class MemoryStream : Stream
@@ -63,3 +64,4 @@ namespace AIC.Core.IO
         }
     }
 }
+*/
