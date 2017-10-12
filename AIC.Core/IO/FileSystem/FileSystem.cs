@@ -21,12 +21,14 @@ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
 IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+//Disabling GLNFS as FAT is implemented. DetectDrives method may be implemented later.
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace dewitcher.IO.FileSystem
+namespace AIC.Core.IO.FileSystem
 {
     public class FileSystem
     {

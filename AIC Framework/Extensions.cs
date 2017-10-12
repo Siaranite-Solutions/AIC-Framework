@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using dewitcher2;
-using dewitcher2.Core;
+using AIC_Framework;
+using AIC.Core;
 
-namespace dewitcher2.Extensions
+namespace AIC_Framework.Extensions
 {
     public static class NumericExtensions
     {
@@ -23,8 +23,8 @@ namespace dewitcher2.Extensions
     {
         public static void Reboot() { ACPI.Reboot(); }
         public static void Shutdown() { ACPI.Shutdown(); }
-        public static void SleepSeconds(uint value) { dewitcher2.Core.PIT.SleepSeconds(value); }
-        public static void SleepMilliseconds(uint value) { dewitcher2.Core.PIT.SleepMilliseconds(value); }
+        public static void SleepSeconds(uint value) { AIC.Core.PIT.SleepSeconds(value); }
+        public static void SleepMilliseconds(uint value) { AIC.Core.PIT.SleepMilliseconds(value); }
         public static uint GetMemory() { return GetRAM.GetAmountOfRAM + 1; }
         public static void ShowBootscreen(
             string OSname, 
@@ -108,7 +108,7 @@ namespace dewitcher2.Extensions
                 return str[null_based_index];
             else
             {
-                dewitcher2.Bluescreen.Init("string._GetCharAt", "null_based_index must be >= 0 and <= the length of the string");
+                AIC_Framework.Bluescreen.Init("string._GetCharAt", "null_based_index must be >= 0 and <= the length of the string");
                 return char.MinValue;
             }
         }

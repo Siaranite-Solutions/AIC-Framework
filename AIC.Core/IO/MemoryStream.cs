@@ -31,9 +31,9 @@ namespace AIC.Core.IO
 {
     public unsafe class MemoryStream : Stream
     {
-        private bool eof;
-        public bool EOF { get { return eof; } }
-        private byte* data;
+        private static bool eof;
+        public static bool EOF { get { return eof; } }
+        private static byte* data;
         private uint length;
         public MemoryStream(byte* dat)
         {

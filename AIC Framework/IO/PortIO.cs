@@ -24,9 +24,9 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
 using System.Collections.Generic;
-using Cosmos.Core;
+using AIC.Core;
 
-namespace dewitcher.IO
+namespace AIC_Framework.IO
 {
     public static class PortIO
     {
@@ -37,8 +37,7 @@ namespace dewitcher.IO
         /// <returns></returns>
         public static byte inb(ushort port)
         {
-            IOPort io = new IOPort(port);
-            return io.Byte;
+            return AIC.Core.IO.PortIO.inb(port);
         }
         /// <summary>
         /// Reads a 16 bit word
@@ -47,8 +46,7 @@ namespace dewitcher.IO
         /// <returns></returns>
         public static ushort inw(ushort port)
         {
-            IOPort io = new IOPort(port);
-            return io.Word;
+            return AIC.Core.IO.PortIO.inw(port);
         }
         /// <summary>
         /// Reads a 32 bit word
@@ -57,8 +55,7 @@ namespace dewitcher.IO
         /// <returns></returns>
         public static uint inl(ushort port)
         {
-            IOPort io = new IOPort(port);
-            return io.DWord;
+            return AIC.Core.IO.PortIO.inl(port);
         }
         /// <summary>
         /// Writes a byte
@@ -67,8 +64,7 @@ namespace dewitcher.IO
         /// <param name="data"></param>
         public static void outb(ushort port, byte data)
         {
-            IOPort io = new IOPort(port);
-            io.Byte = data;
+            AIC.Core.IO.PortIO.outb(port, data);
         }
         /// <summary>
         /// Writes a 16 bit word
@@ -77,8 +73,7 @@ namespace dewitcher.IO
         /// <param name="data"></param>
         public static void outw(ushort port, ushort data)
         {
-            IOPort io = new IOPort(port);
-            io.Word = data;
+            AIC.Core.IO.PortIO.outw(port, data);
         }
         /// <summary>
         /// Writes a 32 bit word
@@ -87,8 +82,7 @@ namespace dewitcher.IO
         /// <param name="data"></param>
         public static void outl(ushort port, uint data)
         {
-            IOPort io = new IOPort(port);
-            io.DWord = data;
+            AIC.Core.IO.PortIO.outl(port, data);
         }
     }
 }

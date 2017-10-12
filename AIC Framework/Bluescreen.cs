@@ -24,10 +24,10 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
 using System.Collections.Generic;
-using dewitcher2;
-using dewitcher2.Core;
+using AIC_Framework;
+using AIC.Core;
 
-namespace dewitcher2
+namespace AIC_Framework
 {
     public static class Bluescreen
     {
@@ -43,97 +43,97 @@ namespace dewitcher2
             bool critical = false)
         {
             DrawOOPS();
-            if (description.Length + 33 < Console.WindowHeight)
+            if (description.Length + 33 < System.Console.WindowHeight)
             {
-                Console.CursorTop = 2; Console.CursorLeft = 33;
+                System.Console.CursorTop = 2; System.Console.CursorLeft = 33;
                 ConsoleColor errcolor = ConsoleColor.White;
                 if (critical) errcolor = ConsoleColor.Red;
-                KConsole.WriteLineEx(error, errcolor, ConsoleColor.Blue);
-                KConsole.CursorTop = 4; Console.CursorLeft = 70;
-                KConsole.WriteLineEx(description, ConsoleColor.White, ConsoleColor.Blue);
+                AConsole.WriteLineEx(error, errcolor, ConsoleColor.Blue);
+                AConsole.CursorTop = 4; AConsole.CursorLeft = 70;
+                AConsole.WriteLineEx(description, ConsoleColor.White, ConsoleColor.Blue);
             }
             else
             {
-                Console.CursorTop = 12; Console.CursorLeft = 2;
+                AConsole.CursorTop = 12; AConsole.CursorLeft = 2;
                 ConsoleColor errcolor = ConsoleColor.White;
                 if (critical) errcolor = ConsoleColor.Red;
-                KConsole.WriteLineEx(error, errcolor, ConsoleColor.Blue);
-                Console.CursorTop = 14; Console.CursorLeft = 2;
-                KConsole.WriteLineEx(description, ConsoleColor.White, ConsoleColor.Blue);
+                AConsole.WriteLineEx(error, errcolor, ConsoleColor.Blue);
+                AConsole.CursorTop = 14; AConsole.CursorLeft = 2;
+                AConsole.WriteLineEx(description, ConsoleColor.White, ConsoleColor.Blue);
             }
             if (!critical)
             {
-                Console.CursorTop = Console.WindowHeight - 1;
-                KConsole.WriteEx("Press the [Enter]-key to resume", ConsoleColor.White, ConsoleColor.Blue);
-                Console.CursorTop++;
-                Console.ReadLine();
-                Console.Clear();
+                AConsole.CursorTop = AConsole.WindowHeight - 1;
+                AConsole.WriteEx("Press the [Enter]-key to resume", ConsoleColor.White, ConsoleColor.Blue);
+                AConsole.CursorTop++;
+                AConsole.ReadLine();
+                AConsole.Clear();
             }
             else
             {
-                Console.CursorTop = Console.WindowHeight - 4;
-                KConsole.WriteLineEx("Press the [Enter]-key to shutdown", ConsoleColor.White, ConsoleColor.Blue);
-                Console.CursorTop++;
-                KConsole.WriteLineEx("If it doesn't work, press the RESET-button on your computer.", ConsoleColor.White, ConsoleColor.Blue);
-                Console.CursorTop++;
-                Console.ReadLine();
+                AConsole.CursorTop = AConsole.WindowHeight - 4;
+                AConsole.WriteLineEx("Press the [Enter]-key to shutdown", ConsoleColor.White, ConsoleColor.Blue);
+                AConsole.CursorTop++;
+                AConsole.WriteLineEx("If it doesn't work, press the RESET-button on your computer.", ConsoleColor.White, ConsoleColor.Blue);
+                AConsole.CursorTop++;
+                AConsole.ReadLine();
                 ACPI.Shutdown();
             }
         }
         public static void Init(Exception ex, bool critical = false)
         {
             DrawOOPS();
-            if (ex.Message.Length + 33 < Console.WindowHeight)
+            if (ex.Message.Length + 33 < AConsole.WindowHeight)
             {
-                Console.CursorTop = 2; Console.CursorLeft = 33;
+                AConsole.CursorTop = 2; AConsole.CursorLeft = 33;
                 ConsoleColor errcolor = ConsoleColor.White;
                 if (critical) errcolor = ConsoleColor.Red;
-                KConsole.WriteLineEx(ex.Source, errcolor, ConsoleColor.Blue);
-                Console.CursorTop = 4; Console.CursorLeft = 70;
-                KConsole.WriteLineEx(ex.Message, ConsoleColor.White, ConsoleColor.Blue);
+                AConsole.WriteLineEx(ex.Source, errcolor, ConsoleColor.Blue);
+                AConsole.CursorTop = 4; AConsole.CursorLeft = 70;
+                AConsole.WriteLineEx(ex.Message, ConsoleColor.White, ConsoleColor.Blue);
             }
             else
             {
-                Console.CursorTop = 12; Console.CursorLeft = 2;
+                AConsole.CursorTop = 12; AConsole.CursorLeft = 2;
                 ConsoleColor errcolor = ConsoleColor.White;
                 if (critical) errcolor = ConsoleColor.Red;
-                KConsole.WriteLineEx(ex.Source, errcolor, ConsoleColor.Blue);
-                Console.CursorTop = 14; Console.CursorLeft = 2;
-                KConsole.WriteLineEx(ex.Message, ConsoleColor.White, ConsoleColor.Blue);
+                AConsole.WriteLineEx(ex.Source, errcolor, ConsoleColor.Blue);
+                AConsole.CursorTop = 14; AConsole.CursorLeft = 2;
+                AConsole.WriteLineEx(ex.Message, ConsoleColor.White, ConsoleColor.Blue);
             }
             if (!critical)
             {
-                Console.CursorTop = Console.WindowHeight - 3;
-                KConsole.WriteEx("Press the [Enter]-key to resume", ConsoleColor.White, ConsoleColor.Blue);
-                Console.CursorTop++;
-                Console.ReadLine();
-                Console.Clear();
+                AConsole.CursorTop = AConsole.WindowHeight - 3;
+                AConsole.WriteEx("Press the [Enter]-key to resume", ConsoleColor.White, ConsoleColor.Blue);
+                AConsole.CursorTop++;
+                AConsole.ReadLine();
+                AConsole.Clear();
             }
             else
             {
-                Console.CursorTop = Console.WindowHeight - 4;
-                KConsole.WriteEx("Press the [Enter]-key to shutdown", ConsoleColor.White, ConsoleColor.Blue);
-                Console.CursorTop++;
-                KConsole.WriteEx("If it doesn't work, press the RESET-button on your computer.", ConsoleColor.White, ConsoleColor.Blue);
-                Console.CursorTop++;
-                Console.ReadLine();
+                AConsole.CursorTop = AConsole.WindowHeight - 4;
+                AConsole.WriteEx("Press the [Enter]-key to shutdown", ConsoleColor.White, ConsoleColor.Blue);
+                AConsole.CursorTop++;
+                AConsole.WriteEx("If it doesn't work, press the RESET-button on your computer.", ConsoleColor.White, ConsoleColor.Blue);
+                AConsole.CursorTop++;
+                AConsole.ReadLine();
                 ACPI.Shutdown();
             }
         }
         private static void DrawOOPS()
         {
-            KConsole.Fill(ConsoleColor.Blue);
+            AConsole.Fill(ConsoleColor.Blue);
             string[] arrOOPS = new string[] {
                 "======  ======  =====  =====  =",
                 "=    =  =    =  =   =  =      =",
                 "=    =  =    =  =====  =====  =",
                 "=    =  =    =  =          =   ",
                 "======  ======  =      =====  ="};
-            Console.CursorTop = 2;
+            AConsole.CursorTop = 2;
             foreach (string str in arrOOPS)
             {
-                Console.CursorLeft = 2;
-                KConsole.WriteLineEx(str, ConsoleColor.White, ConsoleColor.Blue);
+                AConsole.CursorLeft = 2;
+                AConsole.WriteLineEx(str, ConsoleColor.White, ConsoleColor.Blue);
             }
         }
         /// <summary>
@@ -141,13 +141,13 @@ namespace dewitcher2
         /// </summary>
         public static void Panic()
         {
-            Console.Clear();
-            KConsole.Fill(ConsoleColor.Red);
-            Console.CursorTop = 2;
-            KConsole.WriteLineEx("KERNEL PANIC", ConsoleColor.White, ConsoleColor.Red, true);
-            Console.WriteLine("\n");
+            AConsole.Clear();
+            AConsole.Fill(ConsoleColor.Red);
+            AConsole.CursorTop = 2;
+            AConsole.WriteLineEx("KERNEL PANIC", ConsoleColor.White, ConsoleColor.Red, true);
+            AConsole.WriteLine("\n");
             string message = "CRITICAL KERNEL EXCEPTION\nPLEASE CONTACT YOUR SOFTWARE MANUFACTURER";
-            KConsole.WriteLineEx(message, ConsoleColor.White, ConsoleColor.Red, true);
+            AConsole.WriteLineEx(message, ConsoleColor.White, ConsoleColor.Red, true);
             // Enter an infinite loop
             while (true)
             {

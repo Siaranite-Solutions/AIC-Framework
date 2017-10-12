@@ -26,9 +26,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using C = dewitcher2.Core.IO.PortIO;
+using C = AIC.Core.IO.PortIO;
 
-namespace dewitcher.dev
+namespace AIC_Framework.dev
 {
     public partial class TextScreen
     {

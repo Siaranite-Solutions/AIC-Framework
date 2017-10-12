@@ -24,7 +24,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
 using System.Collections.Generic;
-using dewitcher2.Core;
+using AIC.Core;
 // IDT code by Grunt
 namespace AIC.Core
 {

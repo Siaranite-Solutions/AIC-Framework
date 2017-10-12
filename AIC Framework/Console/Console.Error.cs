@@ -25,19 +25,19 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 using System;
 using System.Collections.Generic;
 
-namespace dewitcher
+namespace AIC_Framework
 {
-    public static partial class Console
+    public static partial class AConsole
     {
         public static class Error
         {
             public static void Write(string text)
             {
-                Console.Write("[!] ERROR: " + text.ToUpper(), ConsoleColor.Red);
+                AConsole.Write("[!] ERROR: " + text.ToUpper(), ConsoleColor.Red);
             }
             public static void WriteLine(string text)
             {
-                Console.WriteLine("[!] ERROR: " + text.ToUpper(), ConsoleColor.Red);
+                AConsole.WriteLine("[!] ERROR: " + text.ToUpper(), ConsoleColor.Red);
             }
         }
     }

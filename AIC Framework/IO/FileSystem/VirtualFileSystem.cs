@@ -20,15 +20,18 @@ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVI
 DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
 IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+
 
 // I got kind of lazy and decieded to use the code from GDOS....
+
+
+//Can be updated and implemented at a later stage
 
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace dewitcher.IO.FileSystem
+namespace AIC_Framework.IO.FileSystem
 {
     public class Drive
     {
@@ -113,3 +116,4 @@ namespace dewitcher.IO.FileSystem
     }
 
 }
+*/

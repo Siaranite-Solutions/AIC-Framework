@@ -27,9 +27,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using dewitcher2.Core.IO;
+using AIC.Core.IO;
 
-namespace dewitcher2
+namespace AIC_Framework
 {
     public class PCSpeaker
     {

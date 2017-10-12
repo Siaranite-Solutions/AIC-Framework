@@ -25,7 +25,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 using System;
 using System.Collections.Generic;
 // IDT code by Grunt
-namespace dewitcher2
+namespace AIC_Framework
 {
     public class IDT
     {
@@ -33,11 +33,11 @@ namespace dewitcher2
         public static ISR[] idt = new ISR[0xFF];
         public static void Remap()
         {
-            dewitcher2.Core.IDT.Remap();   
+            AIC.Core.IDT.Remap();   
         }
         private void idt_handler()
         {
-            dewitcher2.Core.IDT.idt_handler();
+            AIC.Core.IDT.idt_handler();
         }
 
         public static void SetGate(byte int_num, ISR handler)

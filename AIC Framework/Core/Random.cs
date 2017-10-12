@@ -26,14 +26,13 @@ using System;
 using System.Collections.Generic;
 
 // Third Person ftw
-namespace dewitcher2
+namespace AIC_Framework
 {
     public class Random
     {
         public void Next(uint min, uint max)
         {
-            // * Splitty will implement it soon
-            // * Splitty haves the plan in his mind
+            throw new NotImplementedException();
         }
     }
 }

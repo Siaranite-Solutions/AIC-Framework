@@ -24,10 +24,11 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
 using System.Collections.Generic;
+using AIC.Core;
 
-namespace dewitcher
+namespace AIC_Framework
 {
-    public static partial class Console
+    public static partial class AConsole
     {
         public static class Animation
         {
@@ -37,11 +38,11 @@ namespace dewitcher
                 {
                     for (int j = 0; j < 81; j++)
                     {
-                        Console.Write(" ");
+                        AConsole.Write(" ");
                     }
-                    Core.PIT.SleepMilliseconds(mspause);
+                    AIC.Core.PIT.SleepMilliseconds(mspause);
                 }
-                Console.Clear();
+                AConsole.Clear();
             }
             public static void RollDown(uint mspause)
             {
@@ -49,11 +50,11 @@ namespace dewitcher
                 {
                     for (int j = 0; j < 81; j++)
                     {
-                        Console.Write(" ");
-                        Core.PIT.SleepMilliseconds(mspause);
+                        AConsole.Write(" ");
+                        AIC.Core.PIT.SleepMilliseconds(mspause);
                     }
                 }
-                Console.Clear();
+                AConsole.Clear();
             }
         }
     }

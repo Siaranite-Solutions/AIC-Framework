@@ -24,9 +24,9 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
 
-namespace dewitcher2.KConsole
+namespace AIC_Framework
 {
-    public static partial class Console
+    public static partial class AConsole
     {
         public partial class Menu
         {

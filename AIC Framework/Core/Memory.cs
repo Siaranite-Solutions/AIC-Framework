@@ -24,10 +24,10 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
 using System.Collections.Generic;
-using dewitcher2;
-using dewitcher2.Core;
+using AIC_Framework;
+using AIC.Core;
 
-namespace dewitcher2
+namespace AIC_Framework
 {
     public static unsafe class Memory
     {

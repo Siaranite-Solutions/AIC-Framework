@@ -24,9 +24,9 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
 using System.Collections.Generic;
-using C = dewitcher2.Core.IO.PortIO;
+using C = AIC.Core.IO.PortIO;
 
-namespace dewitcher.dev
+namespace AIC_Framework.dev
 {
     public static class ATAPI
     {

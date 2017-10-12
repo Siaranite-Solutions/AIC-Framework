@@ -23,11 +23,17 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // I got kind of lazy and decieded to use the code from GDOS....
 
+
+//Can be updated and implemented at a later stage
+
+//If the Joker was a high-level programming language what would he say to Batman?
+//Y SO LOW LEVEL???
+
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace dewitcher.IO.FileSystem
+namespace AIC.Core.IO.FileSystem
 {
     public class Drive
     {

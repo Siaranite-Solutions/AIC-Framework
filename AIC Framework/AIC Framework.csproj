@@ -5,6 +5,10 @@
     <ProjectGuid>{cbae884b-71bb-419a-a3ed-6eafa8e0f440}</ProjectGuid>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="AIC_FrameworkBoot.Cosmos" />
   </ItemGroup>

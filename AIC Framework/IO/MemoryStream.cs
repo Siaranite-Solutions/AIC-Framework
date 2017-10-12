@@ -27,7 +27,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 // Splitty was here
-namespace dewitcher.IO
+namespace AIC_Framework.IO
 {
     public unsafe class MemoryStream : Stream
     {

@@ -24,27 +24,27 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
 using dewitcher2;
-using dewitcher2.Core;
-using IO = dewitcher2.Core.IO;
+using AIC.Core;
+using IO = AIC.Core.IO;
 
-namespace dewitcher2
+namespace AIC_Framework
 {
     public static class PIT
     {
         public static void Mode0(uint frequency)
         {
-            dewitcher2.Core.PIT.Mode0(frequency);
+            AIC.Core.PIT.Mode0(frequency);
         }
         public static void Mode2(uint frequency)
         {
-            dewitcher2.Core.PIT.Mode2(frequency);
+            AIC.Core.PIT.Mode2(frequency);
         }
         public static void Beep(uint frequency)
         {
             uint divisor = 1193182 / frequency;
-            dewitcher2.Core.IO.PortIO.outb(0x43, 0xB6);
-            dewitcher2.Core.IO.PortIO.outb(0x42, (byte)(divisor & 0xFF));
-            dewitcher2.Core.IO.PortIO.outb(0x42, (byte)((divisor >> 8) & 0xFF));
+            AIC.Core.IO.PortIO.outb(0x43, 0xB6);
+            AIC.Core.IO.PortIO.outb(0x42, (byte)(divisor & 0xFF));
+            AIC.Core.IO.PortIO.outb(0x42, (byte)((divisor >> 8) & 0xFF));
         }
         internal static bool called = false;
         public static void SleepSeconds(uint seconds)
@@ -53,7 +53,7 @@ namespace dewitcher2
         }
         public static void SleepMilliseconds(uint milliseconds)
         {
-            dewitcher2.Core.PIT.SleepMilliseconds(milliseconds);
+            AIC.Core.PIT.SleepMilliseconds(milliseconds);
         }
     }
 }

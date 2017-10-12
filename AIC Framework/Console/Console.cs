@@ -25,13 +25,13 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 using System;
 using System.Collections.Generic;
 
-namespace dewitcher2.KConsole
+namespace AIC_Framework
 {
     
     /// <summary>
     /// The awesome dewitcher Console
     /// </summary>
-    public static partial class Console
+    public static partial class AConsole
     {
         private static int indent = 0;
         /// <summary>
@@ -178,15 +178,15 @@ namespace dewitcher2.KConsole
         /// <param name="color"></param>
         public static void Fill(ConsoleColor color)
         {
-            Console.Clear();
-            ConsoleColor backup = Console.BackgroundColor;
-            Console.BackgroundColor = color;
+            AConsole.Clear();
+            ConsoleColor backup = AConsole.BackgroundColor;
+            AConsole.BackgroundColor = color;
             for (int i = 0; i < (80 * 25); i++)
             {
-                Console.Write(" ");
+                AConsole.Write(" ");
             }
-            Console.BackgroundColor = backup;
-            Console.CursorTop = 0;
+            AConsole.BackgroundColor = backup;
+            AConsole.CursorTop = 0;
         }
         /// <summary>
         /// Clear Method

@@ -27,7 +27,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace dewitcher.IO
+namespace AIC_Framework.IO
 {
     public abstract class Stream
     {
@@ -36,30 +36,17 @@ namespace dewitcher.IO
         public uint Position;
         public byte Read()
         {
-            if (canRead)
-            {
-                uint tmp = Position;
-                Position++;
-                return ReadByte(tmp);
-            }
-            else
-                throw new Exception("Can not read!");
+            return AIC.Core.IO.Stream.Read();
         }
         public void Write(byte b)
         {
-            if (canWrite)
-            {
-                uint tmp = Position;
-                Position++;
-                WriteByte(tmp, b);
-            }
-            else
-                throw new Exception("Can not Write!");
+            AIC.Core.IO.Stream.Write(b);
         }
-        public virtual void Flush()
+        public static void Flush()
         {
+            AIC.Core.IO.Stream.Flush();
         }
-        public void Close()
+        public static void Close()
         {
             Flush();
         }

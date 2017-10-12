@@ -26,7 +26,7 @@ using System;
 using System.Collections.Generic;
 
 // That's the super secret dewitcher event log
-namespace dewitcher2.dev
+namespace AIC_Framework.dev
 {
     public static class Log
     {
@@ -51,7 +51,7 @@ namespace dewitcher2.dev
         {
             if (!initialized) init();
             // Save current console state
-            KConsole.VideoRAM.SetContent("__internal:logbackup");
+            AConsole.VideoRAM.SetContent("__internal:logbackup");
             // Write the entries
             int max = Console.WindowHeight - 4;
             int found = 0;

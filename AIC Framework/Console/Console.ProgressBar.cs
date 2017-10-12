@@ -27,9 +27,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace dewitcher
+namespace AIC_Framework
 {
-    public static partial class Console
+    public static partial class AConsole
     {
         public class ProgressBar
         {
@@ -73,17 +73,17 @@ namespace dewitcher
             /// <param name="value"></param>
             public void Draw()
             {
-                int ct = Console.CursorTop;
-                int cl = Console.CursorLeft;
-                Console.WriteLine();
+                int ct = AConsole.CursorTop;
+                int cl = AConsole.CursorLeft;
+                AConsole.WriteLine();
                 string buffer = "[                                                  ] ";
-                Console.Write(buffer);
-                Console.CursorLeft = cl + 1;
+                AConsole.Write(buffer);
+                AConsole.CursorLeft = cl + 1;
                 if (flicker)
                 {
                     for (int i = 0; i < this.value / 2; i++)
                     {
-                        if (this.value / 2 <= 50) Console.Write("=");
+                        if (this.value / 2 <= 50) AConsole.Write("=");
                     }
                 }
                 else
@@ -93,12 +93,12 @@ namespace dewitcher
                     {
                         if (this.value / 2 <= 50) __buffer += "=";
                     }
-                    Console.Write(__buffer);
+                    AConsole.Write(__buffer);
                 }
-                Console.CursorLeft = cl + 54;
-                Console.Write(this.value.ToString() + "%");
-                Console.CursorTop = ct;
-                Console.CursorLeft = cl;
+                AConsole.CursorLeft = cl + 54;
+                AConsole.Write(this.value.ToString() + "%");
+                AConsole.CursorTop = ct;
+                AConsole.CursorLeft = cl;
             }
             private void Refresh()
             {

@@ -31,10 +31,10 @@ namespace AIC.Core.IO
 {
     public abstract class Stream
     {
-        public bool canRead;
-        public bool canWrite;
-        public uint Position;
-        public byte Read()
+        public static bool canRead;
+        public static bool canWrite;
+        public static uint Position;
+        public static byte Read()
         {
             if (canRead)
             {
@@ -45,7 +45,7 @@ namespace AIC.Core.IO
             else
                 throw new Exception("Can not read!");
         }
-        public void Write(byte b)
+        public static void Write(byte b)
         {
             if (canWrite)
             {
@@ -56,18 +56,18 @@ namespace AIC.Core.IO
             else
                 throw new Exception("Can not Write!");
         }
-        public virtual void Flush()
+        public static void Flush()
         {
         }
-        public void Close()
+        public static void Close()
         {
             Flush();
         }
-        internal virtual byte ReadByte(uint p)
+        internal static byte ReadByte(uint p)
         {
             throw new Exception("Read not implemented!");
         }
-        internal virtual void WriteByte(uint p, byte b)
+        internal static void WriteByte(uint p, byte b)
         {
             throw new Exception("Write not implemented!");
         }

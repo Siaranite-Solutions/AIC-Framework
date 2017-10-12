@@ -24,17 +24,17 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 using System;
 using System.Collections.Generic;
 //Some code was used in GruntTheDivine's infinity kernel. He gave permission for it to be made public.
-namespace dewitcher2
+namespace AIC_Framework
 {
     public class IRQ
     {
         public static void SetMask(byte IRQline)
         {
-            dewitcher2.Core.IRQ.SetMask(IRQline);
+            AIC.Core.IRQ.SetMask(IRQline);
         }
         public static void ClearMask(byte IRQline)
         {
-            dewitcher2.Core.IRQ.ClearMask(IRQline);
+            AIC.Core.IRQ.ClearMask(IRQline);
         }
     }
 }

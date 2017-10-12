@@ -23,7 +23,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 using System;
-using dewitcher2.Extensions;
+using AIC_Framework.Extensions;
 using AIC.Hardware;
 
 namespace AIC_Framework

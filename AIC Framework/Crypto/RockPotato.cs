@@ -25,7 +25,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 using System;
 using System.Collections.Generic;
 
-namespace dewitcher2.Crypto
+namespace AIC_Framework.Crypto
 {
     /// <summary>
     /// A hash developed by Splitty
@@ -52,7 +52,7 @@ namespace dewitcher2.Crypto
             }
 
             // Allocate memory
-            Core.Heap.MemAlloc(sizeof(UInt64));
+            Memory.MemAlloc(sizeof(UInt64));
 
             UInt64 final = 0;
 

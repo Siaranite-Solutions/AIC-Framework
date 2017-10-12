@@ -24,7 +24,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
 
-namespace dewitcher2.Crypto
+namespace AIC_Framework.Crypto
 {
     /// <summary>
     /// Rot13

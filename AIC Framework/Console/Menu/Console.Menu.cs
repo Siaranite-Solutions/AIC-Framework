@@ -25,15 +25,15 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 using System;
 using System.Collections.Generic;
 
-namespace dewitcher2
+namespace AIC_Framework
 {
-    public static partial class KConsole
+    public static partial class AConsole
     {
         public partial class Menu
         {
             public static bool recovery = false;
             public static int menu = 0;
-            public static List<Console.Menu.Category> cat;
+            public static List<AConsole.Menu.Category> cat;
             public static ConsoleColor fill;
             public static ConsoleColor background;
             public static ConsoleColor normal;
@@ -44,7 +44,7 @@ namespace dewitcher2
             public static void Reset()
             {
                 cat.Clear();
-                cat = new List<KConsole.Menu.Category>();
+                cat = new List<AConsole.Menu.Category>();
                 fill = ConsoleColor.Cyan;
                 background = ConsoleColor.Green;
                 normal = ConsoleColor.Black;
@@ -62,24 +62,24 @@ namespace dewitcher2
                     arrow = colors[4];
                 }
                 else if (colors.Length < 5)
-                    dewitcher2.KConsole.Bluescreen.Init("INVALID_THEME_EXCEPTION",
+                    AIC_Framework.Bluescreen.Init("INVALID_THEME_EXCEPTION",
                     "Looks like your ConsoleColor-Array contains less than 5 entries");
                 else if (colors.Length > 5)
-                    dewitcher2.KConsole.Bluescreen.Init("INVALID_THEME_EXCEPTION",
+                    AIC_Framework.Bluescreen.Init("INVALID_THEME_EXCEPTION",
                     "Looks like your ConsoleColor-Array contains more than 5 entries");
             }
-            public static void AddCategory(KConsole.Console.Menu.Category category) { cat.Add(category); }
+            public static void AddCategory(AConsole.Menu.Category category) { cat.Add(category); }
             public static void Show()
             {
                 System.Console.Clear();
-                KConsole.Console.Fill(fill);
+                AConsole.Fill(fill);
                 while (true)
                 {
                     if (recovery) break;
                     if (menu == 0) ShowCategoryMenu();
-                    else if (menu == 1) { Console.Fill(fill); menu++; }
+                    else if (menu == 1) { AConsole.Fill(fill); menu++; }
                     else if (menu == 2) ShowEntryMenu();
-                    else if (menu == 3) { Console.Fill(fill); menu = 0; }
+                    else if (menu == 3) { AConsole.Fill(fill); menu = 0; }
                 }
             }
             private static void ShowCategoryMenu()
@@ -87,28 +87,28 @@ namespace dewitcher2
                 for (int i = 10 - (cat.Count / 2); i < 11 + cat.Count; i++)
                 {
                     string buffer = "";
-                    Console.CursorTop = i;
+                    AConsole.CursorTop = i;
                     for (int j = 10; j <= 70; j++)
                     {
                         buffer += " ";
                     }
-                    Console.CursorLeft = 10;
-                    Console.WriteEx(buffer, background, background);
+                    AConsole.CursorLeft = 10;
+                    AConsole.WriteEx(buffer, background, background);
                 }
-                Console.CursorTop = 11 - (cat.Count / 2);
+                AConsole.CursorTop = 11 - (cat.Count / 2);
                 for (int i = 0; i < cat.Count; i++)
                 {
                     if (i == item)
                     {
-                        Console.WriteEx(cat[i].Name, highlighted, background, true);
-                        Console.CursorLeft = 69;
-                        Console.WriteLineEx(">", arrow, background);
+                        AConsole.WriteEx(cat[i].Name, highlighted, background, true);
+                        AConsole.CursorLeft = 69;
+                        AConsole.WriteLineEx(">", arrow, background);
                     }
-                    else Console.WriteLineEx(cat[i].Name, normal, background, true);
+                    else AConsole.WriteLineEx(cat[i].Name, normal, background, true);
                 }
                 while (true)
                 {
-                    ConsoleKey key = Console.ReadKey().Key;
+                    ConsoleKey key = AConsole.ReadKey().Key;
                     if (key == ConsoleKey.UpArrow)
                     {
                         if (item > 0) item--;
@@ -135,28 +135,28 @@ namespace dewitcher2
                 for (int i = 10 - (cat[itemcat].entries.Count / 2); i < 11 + cat.Count; i++)
                 {
                     string buffer = "";
-                    Console.CursorTop = i;
+                    AConsole.CursorTop = i;
                     for (int j = 10; j <= 70; j++)
                     {
                         buffer += " ";
                     }
-                    Console.CursorLeft = 10;
-                    Console.WriteEx(buffer, background, background);
+                    AConsole.CursorLeft = 10;
+                    AConsole.WriteEx(buffer, background, background);
                 }
-                Console.CursorTop = 11 - (cat[itemcat].entries.Count / 2);
+                AConsole.CursorTop = 11 - (cat[itemcat].entries.Count / 2);
                 for (int i = 0; i < cat[itemcat].entries.Count; i++)
                 {
                     if (i == item)
                     {
-                        Console.WriteEx(cat[itemcat].entries[i].text, highlighted, background, true);
-                        Console.CursorLeft = 69;
-                        Console.WriteLineEx(">", arrow, background);
+                        AConsole.WriteEx(cat[itemcat].entries[i].text, highlighted, background, true);
+                        AConsole.CursorLeft = 69;
+                        AConsole.WriteLineEx(">", arrow, background);
                     }
-                    else Console.WriteLineEx(cat[itemcat].entries[i].text, normal, background, true);
+                    else AConsole.WriteLineEx(cat[itemcat].entries[i].text, normal, background, true);
                 }
                 while (true)
                 {
-                    ConsoleKey key = Console.ReadKey().Key;
+                    ConsoleKey key = AConsole.ReadKey().Key;
                     if (key == ConsoleKey.UpArrow)
                     {
                         if (item > 0) item--;

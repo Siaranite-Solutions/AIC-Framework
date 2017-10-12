@@ -24,9 +24,9 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
 using System.Text;
-using dewitcher2.Core;
+using AIC.Core;
 
-namespace dewitcher
+namespace AIC_Framework
 {
     public class userACPI
     {

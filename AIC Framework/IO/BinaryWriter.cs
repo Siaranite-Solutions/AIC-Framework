@@ -26,8 +26,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using AIC.Core.IO;
 
-namespace dewitcher.IO
+namespace AIC_Framework.IO
 {
     public class BinaryWriter
     {
@@ -38,37 +39,27 @@ namespace dewitcher.IO
         }
         public void Write(byte dat)
         {
-            BaseStream.Write(dat);
+            AIC.Core.IO.BinaryWriter.Write(dat);
         }
         public void Write(short dat)
         {
-            byte[] data = System.BitConverter.GetBytes(dat);
-            for (int i = 0; i < data.Length; i++)
-                Write(data[i]);
+            AIC.Core.IO.BinaryWriter.Write(dat);
         }
         public void Write(int dat)
         {
-            byte[] data = System.BitConverter.GetBytes(dat);
-            for (int i = 0; i < data.Length; i++)
-                Write(data[i]);
-        }
+        AIC.Core.IO.BinaryWriter.Write(dat);
+    }
         public void Write(long dat)
         {
-            byte[] data = System.BitConverter.GetBytes(dat);
-            for (int i = 0; i < data.Length; i++)
-                Write(data[i]);
+            AIC.Core.IO.BinaryWriter.Write(dat);
         }
         public void Write(ushort dat)
         {
-            byte[] data = System.BitConverter.GetBytes(dat);
-            for (int i = 0; i < data.Length; i++)
-                Write(data[i]);
-        }
+        AIC.Core.IO.BinaryWriter.Write(dat);
+    }
         public void Write(uint dat)
         {
-            byte[] data = System.BitConverter.GetBytes(dat);
-            for (int i = 0; i < data.Length; i++)
-                Write(data[i]);
+        AIC.Core.IO.BinaryWriter.Write(dat);
         }
         public void Write(ulong dat)
         {

@@ -27,7 +27,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace dewitcher.dev
+namespace AIC_Framework.dev
 {
     public partial class TextScreen
     {

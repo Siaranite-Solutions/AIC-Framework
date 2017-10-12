@@ -32,64 +32,64 @@ namespace AIC.Core.IO
 {
     public class BinaryWriter
     {
-        public Stream BaseStream;
+        public static Stream BaseStream;
         public BinaryWriter(Stream stream)
         {
             BaseStream = stream;
         }
-        public void Write(byte dat)
+        public static void Write(byte dat)
         {
-            BaseStream.Write(dat);
+            BinaryWriter.Write(dat);
         }
-        public void Write(short dat)
-        {
-            byte[] data = System.BitConverter.GetBytes(dat);
-            for (int i = 0; i < data.Length; i++)
-                Write(data[i]);
-        }
-        public void Write(int dat)
+        public static void Write(short dat)
         {
             byte[] data = System.BitConverter.GetBytes(dat);
             for (int i = 0; i < data.Length; i++)
                 Write(data[i]);
         }
-        public void Write(long dat)
+        public static void Write(int dat)
         {
             byte[] data = System.BitConverter.GetBytes(dat);
             for (int i = 0; i < data.Length; i++)
                 Write(data[i]);
         }
-        public void Write(ushort dat)
+        public static void Write(long dat)
         {
             byte[] data = System.BitConverter.GetBytes(dat);
             for (int i = 0; i < data.Length; i++)
                 Write(data[i]);
         }
-        public void Write(uint dat)
+        public static void Write(ushort dat)
         {
             byte[] data = System.BitConverter.GetBytes(dat);
             for (int i = 0; i < data.Length; i++)
                 Write(data[i]);
         }
-        public void Write(ulong dat)
+        public static void Write(uint dat)
         {
             byte[] data = System.BitConverter.GetBytes(dat);
             for (int i = 0; i < data.Length; i++)
                 Write(data[i]);
         }
-        public void Write(bool dat)
+        public static void Write(ulong dat)
+        {
+            byte[] data = System.BitConverter.GetBytes(dat);
+            for (int i = 0; i < data.Length; i++)
+                Write(data[i]);
+        }
+        public static void Write(bool dat)
         {
             if (dat)
                 Write((byte)1);
             else
                 Write((byte)0);
         }
-        public void Write(byte[] data)
+        public static void Write(byte[] data)
         {
             for (int i = 0; i < data.Length; i++)
                 Write(data[i]);
         }
-        public void Write(string dat)
+        public static void Write(string dat)
         {
             Write((ushort)dat.Length);
             foreach (byte b in dat)

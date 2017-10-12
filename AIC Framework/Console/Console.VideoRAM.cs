@@ -25,9 +25,9 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 using System;
 using System.Collections.Generic;
 
-namespace dewitcher
+namespace AIC_Framework
 {
-    public unsafe static partial class Console
+    public unsafe static partial class AConsole
     {
         public unsafe static class VideoRAM
         {
@@ -52,7 +52,7 @@ namespace dewitcher
                     byte b = VideoRam[i];
                     vb.data[i] = b;
                 }
-                vb.X = CursorLeft;
+                vb.X = AConsole.CursorLeft;
                 vb.Y = CursorTop;
                 vbufferStack.Push(vb);
             }
@@ -110,7 +110,7 @@ namespace dewitcher
                         byte b = vram[i];
                         vb.data[i] = b;
                     }
-                    vb.X = CursorLeft;
+                    vb.X = AConsole.CursorLeft;
                     vb.Y = CursorTop;
                     vbufferList.Add(vb);
                     return true;
