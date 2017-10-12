@@ -9,18 +9,18 @@ This framework allows a base of common tools to be used within the operating sys
   
 The most advanced Console class for Cosmos  
 Advanced PIT  
-PCAudio driver + musical note frequencies 
-Graphical Textmenu with Themepack support 
+PCAudio driver + musical note frequencies  
+Graphical Textmenu with Themepack support  
 ACPI for Shutdown/Reboot  
-MD5 and Rotation algorithms 
-Kernel extensions 
-Streams 
+MD5 and Rotation algorithms  
+Kernel extensions  
+Streams  
 ProgressBars  
 Advanced RTC  
-Bluescreens 
-Multiple key layouts (QWERTZ, QWERTY and AZERTY) - **Work in progress** 
+Bluescreens  
+Multiple key layouts (QWERTZ, QWERTY and AZERTY) - **Work in progress**  
 Atom File System  
 Console animations  
-Basic memory management 
-AZERTY keymapping 
+Basic memory management  
+AZERTY keymapping  
 Improved QWERTZ keymapping  
