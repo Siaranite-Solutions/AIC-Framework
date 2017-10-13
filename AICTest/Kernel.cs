@@ -63,7 +63,7 @@ namespace AICTest
         protected override void BeforeRun()
         {
 
-            Bootscreen.Show("Welcome to Apollo OS", Bootscreen.Effect.Matrix, ConsoleColor.Green, 1);
+            Bootscreen.Show("Welcome to the AIC Framework test project!", Bootscreen.Effect.Matrix, ConsoleColor.Green, 5);
             Console.Clear();
             menu.Reset();
         }
@@ -77,7 +77,7 @@ namespace AICTest
             catTest.AddEntry(new Entry2());
             // Create a new category: catAICTests
             // Contains methods for testing the AIC Framework.
-            menu.Category catAICTests = new menu.Category("AIC Tests");
+            menu.Category catAICTests = new menu.Category("Power menu");
             catAICTests.AddEntry(new ShutdownEntry());
             catAICTests.AddEntry(new RebootEntry());
 
