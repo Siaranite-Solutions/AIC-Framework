@@ -15,7 +15,7 @@ Contains a simple demo operating system for testing AIC_Framework components
   
 /  
 ---/AIC-Framework.sln   - The main solution file  
----/LICENSE             - The license for the AIC framework  
----/Dewitcher Licence   - The license for the original Dewitcher framework  
+---/LICENCE             - The licence for the AIC framework  
+---/Dewitcher Licence   - The licence for the original Dewitcher framework  
 ---/README              - This readme  
   
