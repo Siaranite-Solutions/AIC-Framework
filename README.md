@@ -19,7 +19,6 @@ ProgressBars
 Advanced RTC  
 Bluescreens  
 Multiple key layouts (QWERTZ, QWERTY and AZERTY) - **Work in progress**  
-Atom File System  
 Console animations  
 Basic memory management  
 AZERTY keymapping  
