@@ -13,11 +13,11 @@ Methods in this ring are not to be called directly, they are called by methods i
 /AICTest  
 Contains a simple demo operating system for testing AIC_Framework components  
   
-/Licenses
-Contains the licenses for the framework, Dewitcher and Cosmos
-/Licenses/LICENCE             - The license for the AIC framework  
-/Licenses/Dewitcher License   - The license for the original Dewitcher framework  
+/Licenses  
+Contains the licenses for the framework, Dewitcher and Cosmos  
+/Licenses/LICENCE             - The license for the AIC framework    
+/Licenses/Dewitcher License   - The license for the original Dewitcher framework    
 
-/AIC-Framework.sln   - The main solution file  
+/AIC-Framework.sln   - The main solution file    
 /README              - This readme  
   
