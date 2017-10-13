@@ -13,9 +13,10 @@ using System.Collections.Generic;
 
 namespace AIC_Framework
 {
-    
+    // For use instead of using System.Console directly, but still calls System.Console
+
     /// <summary>
-    /// The awesome dewitcher Console
+    /// AIC Framework Console class
     /// </summary>
     public static partial class AConsole
     {
@@ -213,6 +214,7 @@ namespace AIC_Framework
         /// </summary>
         /// <returns></returns>
         public static ConsoleKeyInfo ReadKey() { return System.Console.ReadKey(); }
+        public static ConsoleKeyInfo ReadKey(bool print) { return System.Console.ReadKey(print); }
         /// <summary>
         /// System.Console.ReadLine()-Implementation
         /// </summary>
