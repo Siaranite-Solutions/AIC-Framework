@@ -14,13 +14,14 @@ namespace AICTest
         protected override void BeforeRun()
         {
 
-            Bootscreen.Show("Welcome to Apollo OS", Bootscreen.Effect.Matrix, ConsoleColor.Blue, 5);
+            Bootscreen.Show("Welcome to Apollo OS", Bootscreen.Effect.SlideFromLeft, ConsoleColor.Blue, 1);
             Console.Clear();
+            menu.Reset();
         }
         
         protected override void Run()
         {
-            menu.Reset();
+            
             // Create a new category: catTest
             menu.Category catTest = new menu.Category("Test");
             catTest.AddEntry(new TestCommand());
@@ -42,6 +43,10 @@ namespace AICTest
         public TestCommand() { this.text = "Test Command"; }
         public override void Execute()
         {
+            Console.Clear();
+            Console.WriteLine("Test command. Any method called here should work.");
+            System.Console.ReadKey(true);
+            Console.Clear();
             // Place the code that should be executed here
         }
     }
@@ -53,7 +58,10 @@ namespace AICTest
         public override void Execute()
         {
             Console.Clear();
-            AConsole.Write("");
+            AConsole.Write("Hello World!");
+            Console.WriteLine("Press any key to continue...");
+            System.Console.ReadKey(true);
+
             // Place the code that should be executed here
         }
     }

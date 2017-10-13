@@ -33,7 +33,7 @@ namespace AIC_Framework
         {
             public static bool recovery = false;
             public static int menu = 0;
-            public static List<AConsole.Menu.Category> cat;
+            public static List<Category> cat;
             public static ConsoleColor fill;
             public static ConsoleColor background;
             public static ConsoleColor normal;
@@ -44,7 +44,7 @@ namespace AIC_Framework
             public static void Reset()
             {
                 cat.Clear();
-                cat = new List<AConsole.Menu.Category>();
+                cat = new List<Category>();
                 fill = ConsoleColor.Cyan;
                 background = ConsoleColor.Green;
                 normal = ConsoleColor.Black;
@@ -68,18 +68,18 @@ namespace AIC_Framework
                     AIC_Framework.Bluescreen.Init("INVALID_THEME_EXCEPTION",
                     "Looks like your ConsoleColor-Array contains more than 5 entries");
             }
-            public static void AddCategory(AConsole.Menu.Category category) { cat.Add(category); }
+            public static void AddCategory(Category category) { cat.Add(category); }
             public static void Show()
             {
-                System.Console.Clear();
-                AConsole.Fill(fill);
+                Console.Clear();
+                Fill(fill);
                 while (true)
                 {
                     if (recovery) break;
                     if (menu == 0) ShowCategoryMenu();
-                    else if (menu == 1) { AConsole.Fill(fill); menu++; }
+                    else if (menu == 1) { Fill(fill); menu++; }
                     else if (menu == 2) ShowEntryMenu();
-                    else if (menu == 3) { AConsole.Fill(fill); menu = 0; }
+                    else if (menu == 3) { Fill(fill); menu = 0; }
                 }
             }
             private static void ShowCategoryMenu()
@@ -92,23 +92,23 @@ namespace AIC_Framework
                     {
                         buffer += " ";
                     }
-                    AConsole.CursorLeft = 10;
-                    AConsole.WriteEx(buffer, background, background);
+                    CursorLeft = 10;
+                    WriteEx(buffer, background, background);
                 }
-                AConsole.CursorTop = 11 - (cat.Count / 2);
+                CursorTop = 11 - (cat.Count / 2);
                 for (int i = 0; i < cat.Count; i++)
                 {
                     if (i == item)
                     {
-                        AConsole.WriteEx(cat[i].Name, highlighted, background, true);
-                        AConsole.CursorLeft = 69;
-                        AConsole.WriteLineEx(">", arrow, background);
+                        WriteEx(cat[i].Name, highlighted, background, true);
+                        CursorLeft = 69;
+                        WriteLineEx(">", arrow, background);
                     }
-                    else AConsole.WriteLineEx(cat[i].Name, normal, background, true);
+                    else WriteLineEx(cat[i].Name, normal, background, true);
                 }
                 while (true)
                 {
-                    ConsoleKey key = AConsole.ReadKey().Key;
+                    ConsoleKey key = ReadKey().Key;
                     if (key == ConsoleKey.UpArrow)
                     {
                         if (item > 0) item--;
@@ -148,11 +148,11 @@ namespace AIC_Framework
                 {
                     if (i == item)
                     {
-                        AConsole.WriteEx(cat[itemcat].entries[i].text, highlighted, background, true);
-                        AConsole.CursorLeft = 69;
-                        AConsole.WriteLineEx(">", arrow, background);
+                        WriteEx(cat[itemcat].entries[i].text, highlighted, background, true);
+                        CursorLeft = 69;
+                        WriteLineEx(">", arrow, background);
                     }
-                    else AConsole.WriteLineEx(cat[itemcat].entries[i].text, normal, background, true);
+                    else WriteLineEx(cat[itemcat].entries[i].text, normal, background, true);
                 }
                 while (true)
                 {

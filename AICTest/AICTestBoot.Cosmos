@@ -22,5 +22,12 @@
     <None Remove="*.Cosmos" />
     <Compile Remove="*" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AICTest\AICTest.csproj">
+      <Name>AICTest</Name>
+      <Project>{3f9cab17-dc58-4abd-8769-e819a146159e}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(AppData)\Cosmos User Kit\Build\VSIP\Cosmos.targets" />
 </Project>
