@@ -29,7 +29,6 @@ namespace AIC_Framework
             internal static int itemcat = 0;
             public static void Reset()
             {
-                cat.Clear();
                 cat = new List<Category>();
                 fill = ConsoleColor.Cyan;
                 background = ConsoleColor.Green;
