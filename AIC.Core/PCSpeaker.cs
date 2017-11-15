@@ -35,9 +35,10 @@ namespace AIC.Core
         public static void Beep(uint frequency, uint milliseconds)
         {
             Beep(frequency);
-            Core.PIT.SleepMilliseconds(milliseconds);
+            PIT.SleepMilliseconds(milliseconds);
             sound_off();
         }
+        /*
         public struct Notes
         {
             public static uint A0 = 28; // Exactly 27.500
@@ -102,5 +103,6 @@ namespace AIC.Core
             public static uint DS5 = 622;
             public static uint E5 = 659;
         }
+        */
     }
 }

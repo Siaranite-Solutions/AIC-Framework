@@ -22,9 +22,6 @@ IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISI
 THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-// I got kind of lazy and decieded to use the code from GDOS....
-
-
 //Can be updated and implemented at a later stage
 
 using System;

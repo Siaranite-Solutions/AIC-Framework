@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AIC.Core.IO;
+using AIC.Core;
 
 namespace AIC_Framework
 {
@@ -21,19 +21,19 @@ namespace AIC_Framework
     {
         public static void sound_on()
         {
-            PCSpeaker.sound_off();
+            AIC.Core.PCSpeaker.sound_on();
         }
         public static void sound_off()
         {
-            PCSpeaker.sound_off();
+            AIC.Core.PCSpeaker.sound_off();
         }
         public static void Beep(uint frequency)
         {
-            PCSpeaker.Beep(frequency);
+            AIC.Core.PCSpeaker.Beep(frequency);
         }
         public static void Beep(uint frequency, uint milliseconds)
         {
-            PCSpeaker.Beep(frequency, milliseconds);
+            AIC.Core.PCSpeaker.Beep(frequency, milliseconds);
         }
         public struct Notes
         {
