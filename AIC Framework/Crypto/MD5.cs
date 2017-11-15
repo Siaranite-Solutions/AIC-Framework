@@ -20,6 +20,11 @@ namespace AIC_Framework.Crypto
     public static class MD5
     {
 
+        /// <summary>
+        /// Return hash of a string
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns>Hash MD5</returns>
         public static string hash(string str)
         {
             Value = str;
@@ -30,23 +35,23 @@ namespace AIC_Framework.Crypto
         /// <summary>
         /// lookup table 4294967296*sin(i)
         /// </summary>
-        internal readonly static uint[] T = new uint[64] 
-			{	0xd76aa478,0xe8c7b756,0x242070db,0xc1bdceee,
-				0xf57c0faf,0x4787c62a,0xa8304613,0xfd469501,
+        internal readonly static uint[] T = new uint[64]
+            {   0xd76aa478,0xe8c7b756,0x242070db,0xc1bdceee,
+                0xf57c0faf,0x4787c62a,0xa8304613,0xfd469501,
                 0x698098d8,0x8b44f7af,0xffff5bb1,0x895cd7be,
                 0x6b901122,0xfd987193,0xa679438e,0x49b40821,
-				0xf61e2562,0xc040b340,0x265e5a51,0xe9b6c7aa,
+                0xf61e2562,0xc040b340,0x265e5a51,0xe9b6c7aa,
                 0xd62f105d,0x2441453,0xd8a1e681,0xe7d3fbc8,
                 0x21e1cde6,0xc33707d6,0xf4d50d87,0x455a14ed,
-				0xa9e3e905,0xfcefa3f8,0x676f02d9,0x8d2a4c8a,
+                0xa9e3e905,0xfcefa3f8,0x676f02d9,0x8d2a4c8a,
                 0xfffa3942,0x8771f681,0x6d9d6122,0xfde5380c,
                 0xa4beea44,0x4bdecfa9,0xf6bb4b60,0xbebfbc70,
                 0x289b7ec6,0xeaa127fa,0xd4ef3085,0x4881d05,
-				0xd9d4d039,0xe6db99e5,0x1fa27cf8,0xc4ac5665,
+                0xd9d4d039,0xe6db99e5,0x1fa27cf8,0xc4ac5665,
                 0xf4292244,0x432aff97,0xab9423a7,0xfc93a039,
                 0x655b59c3,0x8f0ccc92,0xffeff47d,0x85845dd1,
                 0x6fa87e4f,0xfe2ce6e0,0xa3014314,0x4e0811a1,
-				0xf7537e82,0xbd3af235,0x2ad7d2bb,0xeb86d391};
+                0xf7537e82,0xbd3af235,0x2ad7d2bb,0xeb86d391};
 
         /*****instance variables**************/
         /// <summary>
@@ -65,9 +70,6 @@ namespace AIC_Framework.Crypto
         /// </summary>
         internal static byte[] m_byteInput;
 
-
-
-        /********************************************************************/
         /***********************PROPERTIES ***********************/
         /// <summary>
         ///gets or sets as string
@@ -87,19 +89,15 @@ namespace AIC_Framework.Crypto
             }
             set
             {
-
-
                 m_byteInput = new byte[value.Length];
                 for (int i = 0; i < value.Length; i++)
                     m_byteInput[i] = (byte)value[i];
                 dgFingerPrint = CalculateMD5Value();
-
-
             }
         }
 
         /// <summary>
-        /// get/sets as  byte array 
+        /// Get/sets as byte array 
         /// </summary>
         internal static byte[] ValueAsByte
         {
@@ -112,16 +110,16 @@ namespace AIC_Framework.Crypto
             }
             set
             {
-
                 m_byteInput = new byte[value.Length];
                 for (int i = 0; i < value.Length; i++)
                     m_byteInput[i] = value[i];
                 dgFingerPrint = CalculateMD5Value();
-
             }
         }
 
-        //gets the signature/figner print as string
+        /// <summary>
+        /// Gets the signature/figner print as string
+        /// </summary>
         internal static string FingerPrint
         {
             get
@@ -130,10 +128,7 @@ namespace AIC_Framework.Crypto
             }
         }
 
-
-        /******************************************************************************/
         /*********************METHODS**************************/
-
         /// <summary>
         /// calculat md5 signature of the string in Input
         /// </summary>
@@ -162,8 +157,6 @@ namespace AIC_Framework.Crypto
          * TRANSFORMATIONS :  FF , GG , HH , II  acc to RFC 1321
          * where each Each letter represnets the aux function used
          *********************************************************/
-
-
 
         /// <summary>
         /// perform transformatio using f(((b&c) | (~(b)&d))
@@ -196,8 +189,6 @@ namespace AIC_Framework.Crypto
         {
             a = b + MD5Helper.RotateLeft((a + (c ^ (b | ~d)) + X[k] + T[i - 1]), s);
         }
-
-
 
         /// <summary>
         /// Perform All the transformation on the data
@@ -258,13 +249,10 @@ namespace AIC_Framework.Crypto
             TransI(ref A, B, C, D, 8, 6, 57); TransI(ref D, A, B, C, 15, 10, 58); TransI(ref C, D, A, B, 6, 15, 59); TransI(ref B, C, D, A, 13, 21, 60);
             TransI(ref A, B, C, D, 4, 6, 61); TransI(ref D, A, B, C, 11, 10, 62); TransI(ref C, D, A, B, 2, 15, 63); TransI(ref B, C, D, A, 9, 21, 64);
 
-
             A = A + AA;
             B = B + BB;
             C = C + CC;
             D = D + DD;
-
-
         }
 
 
@@ -281,7 +269,6 @@ namespace AIC_Framework.Crypto
             uint sizeMsgBuff;	//buffer size in multiple of bytes
             int temp = (448 - ((m_byteInput.Length * 8) % 512)); //temporary 
 
-
             pad = (uint)((temp + 512) % 512);		//getting no of bits to  be pad
             if (pad == 0)				///pad is in bits
                 pad = 512;			//at least 1 or max 512 can be added
@@ -290,9 +277,6 @@ namespace AIC_Framework.Crypto
             sizeMsg = (ulong)m_byteInput.Length * 8;
             bMsg = new byte[sizeMsgBuff];	///no need to pad with 0 coz new bytes 
             // are already initialize to 0 :)
-
-
-
 
             ////copying string to buffer 
             for (int i = 0; i < m_byteInput.Length; i++)
@@ -307,7 +291,6 @@ namespace AIC_Framework.Crypto
             return bMsg;
         }
 
-
         /// <summary>
         /// Copies a 512 bit block into X as 16 32 bit words
         /// </summary>
@@ -315,7 +298,6 @@ namespace AIC_Framework.Crypto
         /// <param name="block">no of block to copy starting from 0</param>
         internal static void CopyBlock(byte[] bMsg, uint block)
         {
-
             block = block << 6;
             for (uint j = 0; j < 61; j += 4)
             {
@@ -323,15 +305,13 @@ namespace AIC_Framework.Crypto
                         (((uint)bMsg[block + (j + 2)]) << 16) |
                         (((uint)bMsg[block + (j + 1)]) << 8) |
                         (((uint)bMsg[block + (j)]));
-
             }
         }
     }
-    /// <summary>
-    /// Represent digest with ABCD
-    /// </summary>
+
     internal class Digest
     {
+
         public uint A;
         public uint B;
         public uint C;
@@ -344,6 +324,7 @@ namespace AIC_Framework.Crypto
             C = 0x98BADCFE;
             D = 0X10325476;
         }
+
         public override string ToString()
         {
             string st;
@@ -352,8 +333,8 @@ namespace AIC_Framework.Crypto
                 ToHexString(MD5Helper.ReverseByte(C), 32) +
                 ToHexString(MD5Helper.ReverseByte(D), 32);
             return st;
-
         }
+
         internal string ToHexString(uint aNumber, byte aBits)
         {
             uint xValue = aNumber;
@@ -415,10 +396,7 @@ namespace AIC_Framework.Crypto
                         xDigitString = "F";
                         goto default;
                     default:
-                        if (xDigitString == null)
-                        {
-                            System.Diagnostics.Debugger.Break();
-                        }
+                        if (xDigitString == null) { }
                         overall += xDigitString;
                         break;
                 }
@@ -427,27 +405,17 @@ namespace AIC_Framework.Crypto
         }
 
     }
+
     internal class MD5Helper
     {
 
         internal MD5Helper() { }
 
-        /// <summary>
-        /// Left rotates the input word
-        /// </summary>
-        /// <param name="uiNumber">a value to be rotated</param>
-        /// <param name="shift">no of bits to be rotated</param>
-        /// <returns>the rotated value</returns>
         public static uint RotateLeft(uint uiNumber, ushort shift)
         {
             return ((uiNumber >> 32 - shift) | (uiNumber << shift));
         }
 
-        /// <summary>
-        /// perform a ByteReversal on a number
-        /// </summary>
-        /// <param name="uiNumber">value to be reversed</param>
-        /// <returns>reversed value</returns>
         public static uint ReverseByte(uint uiNumber)
         {
             return (((uiNumber & 0x000000ff) << 24) |
@@ -455,7 +423,6 @@ namespace AIC_Framework.Crypto
                     ((uiNumber & 0x00ff0000) >> 8) |
                     ((uiNumber & 0x0000ff00) << 8));
         }
+
     }
-
-
 }
