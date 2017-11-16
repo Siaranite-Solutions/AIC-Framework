@@ -74,8 +74,8 @@ namespace AIC_Framework
                 AConsole.CursorTop = 2; AConsole.CursorLeft = 33;
                 ConsoleColor errcolor = ConsoleColor.White;
                 if (critical) errcolor = ConsoleColor.Red;
-                AConsole.WriteLineEx(ex.Source, errcolor, ConsoleColor.Blue);
-                AConsole.CursorTop = 4; AConsole.CursorLeft = 70;
+                //AConsole.WriteLineEx(ex.Source, errcolor, ConsoleColor.Blue);
+                AConsole.CursorTop = 3; AConsole.CursorLeft = 70;
                 AConsole.WriteLineEx(ex.Message, ConsoleColor.White, ConsoleColor.Blue);
             }
             else
@@ -83,8 +83,8 @@ namespace AIC_Framework
                 AConsole.CursorTop = 12; AConsole.CursorLeft = 2;
                 ConsoleColor errcolor = ConsoleColor.White;
                 if (critical) errcolor = ConsoleColor.Red;
-                AConsole.WriteLineEx(ex.Source, errcolor, ConsoleColor.Blue);
-                AConsole.CursorTop = 14; AConsole.CursorLeft = 2;
+                //AConsole.WriteLineEx(ex.Source, errcolor, ConsoleColor.Blue);
+                AConsole.CursorTop = 13; AConsole.CursorLeft = 2;
                 AConsole.WriteLineEx(ex.Message, ConsoleColor.White, ConsoleColor.Blue);
             }
             if (!critical)
