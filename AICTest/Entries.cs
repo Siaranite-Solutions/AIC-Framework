@@ -32,7 +32,7 @@ namespace AICTest
     }
     public class Entry1 : menu.Entry
     {
-        public Entry1() { this.text = "Entry 1"; }
+        public Entry1() { this.text = "Apollo Test Entry"; }
         public override void Execute()
         {
             Console.Clear();
@@ -46,15 +46,35 @@ namespace AICTest
     // A hello world entry
     public class Entry2 : menu.Entry
     {
-        public Entry2() { this.text = "Hello World!"; }
+        public Entry2() { this.text = "Hello, world! Test Entry"; }
         public override void Execute()
         {
             Console.Clear();
-            Console.Write("Hello World!");
+            Console.WriteLine("Hello World!");
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey(true);
 
             // Place the code that should be executed here
+        }
+    }
+
+    public class Bluescreen : menu.Entry
+    {
+        public Bluescreen() { this.text = "Bluescreen test"; }
+        public override void Execute()
+        {
+            Console.Clear();
+            Console.WriteLine("Press any key to start a test Stop Error");
+            Console.ReadKey(true);
+            try
+            {
+                System.IO.File.WriteAllText("WHAT", "LKJHSDLKFJHSD£^$&*£$");
+            }
+            catch (Exception ex)
+            {
+                AIC_Framework.Bluescreen.Init(ex, true);
+                // Place the code that should be executed here
+            }
         }
     }
 }

@@ -18,9 +18,9 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Cosmos.Debug.Kernel" Version="2017.10.12" />
-    <PackageReference Include="Cosmos.HAL2" Version="2017.10.12" />
-    <PackageReference Include="Cosmos.System2" Version="2017.10.12" />
+    <PackageReference Include="Cosmos.Debug.Kernel" Version="*" />
+    <PackageReference Include="Cosmos.HAL2" Version="*" />
+    <PackageReference Include="Cosmos.System2" Version="*" />
   </ItemGroup>
 
 </Project>

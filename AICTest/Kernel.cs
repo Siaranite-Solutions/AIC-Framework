@@ -29,9 +29,10 @@ namespace AICTest
             catTest.AddEntry(new Entry2());
             // Create a new category: catAICTests
             // Contains methods for testing the AIC Framework.
-            menu.Category catAICTests = new menu.Category("Power menu");
+            menu.Category catAICTests = new menu.Category("Tests menu");
             catAICTests.AddEntry(new ShutdownEntry());
             catAICTests.AddEntry(new RebootEntry());
+            catAICTests.AddEntry(new Bluescreen());
 
             // Add the categories to the menu
             menu.AddCategory(catTest);
