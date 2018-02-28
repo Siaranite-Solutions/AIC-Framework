@@ -60,7 +60,7 @@ namespace AIC_Framework
                 Fill(fill);
                 while (true)
                 {
-                    if (recovery) break;
+                    if (recovery == true) break;
                     if (menu == 0) ShowCategoryMenu();
                     else if (menu == 1) { Fill(fill); menu++; }
                     else if (menu == 2) ShowEntryMenu();
