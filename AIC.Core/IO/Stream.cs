@@ -26,7 +26,7 @@ namespace AIC.Core.IO
             {
                 uint tmp = Position;
                 Position++;
-                return ReadByte(tmp);
+                return Stream.ReadByte(tmp);
             }
             else
                 throw new Exception("Can not read!");
@@ -37,7 +37,7 @@ namespace AIC.Core.IO
             {
                 uint tmp = Position;
                 Position++;
-                WriteByte(tmp, b);
+                Stream.WriteByte(tmp, b);
             }
             else
                 throw new Exception("Can not Write!");
@@ -49,11 +49,11 @@ namespace AIC.Core.IO
         {
             Flush();
         }
-        internal static byte ReadByte(uint p)
+        public static byte ReadByte(uint p)
         {
             throw new Exception("Read not implemented!");
         }
-        internal static void WriteByte(uint p, byte b)
+        public static byte WriteByte(uint p, byte b)
         {
             throw new Exception("Write not implemented!");
         }

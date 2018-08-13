@@ -68,7 +68,9 @@ namespace AICTest
             Console.ReadKey(true);
             try
             {
-                System.IO.File.WriteAllText("WHAT", "LKJHSDLKFJHSD£^$&*£$");
+                int a = 0;
+                int b = 10;
+                Console.WriteLine((b / a).ToString());
             }
             catch (Exception ex)
             {

@@ -27,10 +27,7 @@ namespace AIC_Framework
         }
         public static void Beep(uint frequency)
         {
-            uint divisor = 1193182 / frequency;
-            AIC.Core.IO.PortIO.outb(0x43, 0xB6);
-            AIC.Core.IO.PortIO.outb(0x42, (byte)(divisor & 0xFF));
-            AIC.Core.IO.PortIO.outb(0x42, (byte)((divisor >> 8) & 0xFF));
+            AIC.Core.PIT.Beep(frequency);
         }
         internal static bool called = false;
         public static void SleepSeconds(uint seconds)

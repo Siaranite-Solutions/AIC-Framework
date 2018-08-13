@@ -15,7 +15,7 @@ namespace AICTest
         protected override void BeforeRun()
         {
 
-            Bootscreen.Show("Welcome to the AIC Framework test project!", Bootscreen.Effect.Matrix, ConsoleColor.Green, 5);
+            Bootscreen.Show("Welcome to the AIC Framework test project!", Bootscreen.Effect.SlideFromLeft, ConsoleColor.Green, 3);
             Console.Clear();
             menu.Reset();
         }

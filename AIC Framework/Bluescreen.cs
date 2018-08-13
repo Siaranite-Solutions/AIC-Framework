@@ -110,11 +110,11 @@ namespace AIC_Framework
         {
             AConsole.Fill(ConsoleColor.Blue);
             string[] arrOOPS = new string[] {
-                "======  ======  =====  =====  =",
-                "=    =  =    =  =   =  =      =",
-                "=    =  =    =  =====  =====  =",
-                "=    =  =    =  =          =   ",
-                "======  ======  =      =====  ="};
+                "=====  =====   =====   =====  =====   |",
+                "=      =    =  =    =  =   =  =    =  |",
+                "=====  ======  ======  =   =  ======  |",
+                "=      =    =  =    =  =   =  =    =  |",
+                "=====  =    =  =    =  =====  =    =  O"};
             AConsole.CursorTop = 2;
             foreach (string str in arrOOPS)
             {
@@ -125,6 +125,27 @@ namespace AIC_Framework
         /// <summary>
         /// Kernel Panic
         /// </summary>
+        public static void Panic(string err, string desc, string lka, ref Cosmos.Core.INTs.IRQContext aContext)
+        {
+            AConsole.Clear();
+            AConsole.Fill(ConsoleColor.Black);
+            AConsole.CursorTop = 2;
+            AConsole.WriteLineEx("kpanic occurred at :" + lka, ConsoleColor.Black, ConsoleColor.White);
+            AConsole.WriteLineEx("Error: " + err, ConsoleColor.Black, ConsoleColor.White);
+            AConsole.WriteLineEx("Description: " + desc, ConsoleColor.Black, ConsoleColor.White);
+            AConsole.WriteLine("\n");
+            AConsole.WriteLine("Debug info:");
+            AConsole.WriteLine("\n");
+            AConsole.WriteLine("eip: " + aContext.EIP);
+            AConsole.WriteLine("eax: " + aContext.EAX + " edx: " + aContext.EDX + " ecx: " + aContext.ECX + " ebx: " + aContext.EBX);
+            AConsole.WriteLine("esi: " + aContext.ESI + " edi: " + aContext.EDI + " ebp: " + aContext.EBP + " esp: " + aContext.ESP);
+            
+            // Enter an infinite loop
+            while (true)
+            {
+
+            }
+        }
         public static void Panic()
         {
             AConsole.Clear();

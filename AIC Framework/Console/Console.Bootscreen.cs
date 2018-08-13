@@ -32,7 +32,7 @@ namespace AIC_Framework
                         for (int x = 0; x < i; x++) fill += " ";
                         AConsole.Write(fill);
                         AConsole.Write(OSname, color, false, true);
-                        AIC.Core.PIT.SleepMilliseconds((uint)ms_sleep);
+                        System.Threading.Thread.Sleep(ms_sleep);
                     } break;
 
                 case Effect.SlideFromRight:
@@ -43,7 +43,7 @@ namespace AIC_Framework
                         AConsole.Clear();
                         AConsole.CursorLeft = i;
                         AConsole.Write(OSname, color, false, true);
-                        AIC.Core.PIT.SleepMilliseconds((uint)ms_sleep);
+                        System.Threading.Thread.Sleep(ms_sleep);
                     } break;
 
                 case Effect.SlideFromTop:
@@ -53,7 +53,7 @@ namespace AIC_Framework
                         AConsole.Clear();
                         AConsole.CursorTop = i;
                         AConsole.WriteLine(OSname, color, true, false);
-                        AIC.Core.PIT.SleepMilliseconds((uint)ms_sleep);
+                        System.Threading.Thread.Sleep(ms_sleep);
                     } break;
 
                 case Effect.SlideFromBottom:
@@ -63,7 +63,7 @@ namespace AIC_Framework
                         AConsole.Clear();
                         AConsole.CursorTop = i;
                         AConsole.WriteLine(OSname, color, true, false);
-                        AIC.Core.PIT.SleepMilliseconds((uint)ms_sleep);
+                        System.Threading.Thread.Sleep(ms_sleep);
                     } break;
 
                 case Effect.Typewriter:
@@ -72,7 +72,7 @@ namespace AIC_Framework
                     foreach (char chr in OSname)
                     {
                         AConsole.Write(chr.ToString(), color, false, true);
-                        AIC.Core.PIT.SleepMilliseconds((uint)ms_sleep);
+                        System.Threading.Thread.Sleep(ms_sleep);
                     } break;
 
                 case Effect.Matrix:

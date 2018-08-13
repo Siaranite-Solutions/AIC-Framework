@@ -99,12 +99,12 @@ namespace AIC_Framework
         /// <param name="backcolor">The background color of the text</param>
         /// <param name="xcenter">Horizontal centered?</param>
         /// <param name="ycenter">Vertical centered?</param>
-        public static void WriteEx(string text = "", ConsoleColor color = ConsoleColor.White, ConsoleColor backcolor = ConsoleColor.Black, bool xcenter = false, bool ycenter = false)
+        public static void WriteEx(string text = "", ConsoleColor ForeColor = ConsoleColor.White, ConsoleColor BackColor = ConsoleColor.Black, bool xcenter = false, bool ycenter = false)
         {
             ConsoleColor originalColor = ForegroundColor;
             ConsoleColor originalColor2 = BackgroundColor;
-            ForegroundColor = color;
-            BackgroundColor = backcolor;
+            ForegroundColor = ForeColor;
+            BackgroundColor = BackColor;
             int X = CursorLeft + indent;
             if (xcenter) CursorLeft = ((WindowWidth / 2) - (text.Length / 2));
             int Y = CursorTop;
@@ -165,13 +165,10 @@ namespace AIC_Framework
         /// <param name="color"></param>
         public static void Fill(ConsoleColor color)
         {
-            AConsole.Clear();
             ConsoleColor backup = AConsole.BackgroundColor;
             AConsole.BackgroundColor = color;
-            for (int i = 0; i < (80 * 25); i++)
-            {
-                AConsole.Write(" ");
-            }
+            Console.BackgroundColor = AConsole.BackgroundColor;
+            Console.Clear();
             AConsole.BackgroundColor = backup;
             AConsole.CursorTop = 0;
         }
