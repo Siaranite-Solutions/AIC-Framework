@@ -8,10 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cosmos.Core" Version="2018.8.7" />
-    <PackageReference Include="Cosmos.HAL2" Version="2018.8.7" />
-    <PackageReference Include="Cosmos.System2" Version="2018.8.7" />
-    <PackageReference Include="IL2CPU.API" Version="2018.8.7" />
+    <PackageReference Include="Cosmos.Core" Version="0-*" NoWarn="NU1604" />
+    <PackageReference Include="Cosmos.HAL2" Version="0-*" NoWarn="NU1604" />
+    <PackageReference Include="Cosmos.System2" Version="0-*" NoWarn="NU1604" />
+    <PackageReference Include="IL2CPU.API" Version="0-*" NoWarn="NU1604" />
   </ItemGroup>
 
   <ItemGroup>
