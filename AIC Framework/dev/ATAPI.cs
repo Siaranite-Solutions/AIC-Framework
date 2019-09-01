@@ -1,7 +1,7 @@
 /*
 Copyright (c) 2012-2013, dewitcher Team
-Copyright (c) 2017, Apollo OS
-Copyright (c) 2017, Cosmos
+Copyright (c) 2019, Siaranite Solutions
+Copyright (c) 2019, Cosmos
 
 All rights reserved.
 

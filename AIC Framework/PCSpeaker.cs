@@ -1,7 +1,7 @@
 /*
 Copyright (c) 2012-2013, dewitcher Team
-Copyright (c) 2017, Apollo OS
-Copyright (c) 2017, Cosmos
+Copyright (c) 2019, Siaranite Solutions
+Copyright (c) 2019, Cosmos
 
 All rights reserved.
 
@@ -35,6 +35,7 @@ namespace AIC_Framework
         {
             AIC.Core.PCSpeaker.Beep(frequency, milliseconds);
         }
+        
         public struct Notes
         {
             public static uint A0 = 28; // Exactly 27.500
@@ -99,5 +100,6 @@ namespace AIC_Framework
             public static uint DS5 = 622;
             public static uint E5 = 659;
         }
+        
     }
 }

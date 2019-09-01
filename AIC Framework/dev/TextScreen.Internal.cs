@@ -1,7 +1,7 @@
 /*
 Copyright (c) 2012-2013, dewitcher Team
-Copyright (c) 2017, Apollo OS
-Copyright (c) 2017, Cosmos
+Copyright (c) 2019, Siaranite Solutions
+Copyright (c) 2019, Cosmos
 
 All rights reserved.
 
@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using AIC.Core.dev;
-using C = AIC.Core.IO.PortIO;
+using CIO = AIC.Core.IO.PortIO;
 
 namespace AIC_Framework.dev
 {
@@ -51,17 +51,17 @@ namespace AIC_Framework.dev
         public static void UpdateCursor(int X, int Y)
         {
             int tmp = GetOffset(X, Y);
-            C.outb(0x3D4, 14);
-            C.outb(0x3D5, (byte)(tmp >> 8));
-            C.outb(0x3D4, 15);
-            C.outb(0x3D5, (byte)tmp);
+            CIO.outb(0x3D4, 14);
+            CIO.outb(0x3D5, (byte)(tmp >> 8));
+            CIO.outb(0x3D4, 15);
+            CIO.outb(0x3D5, (byte)tmp);
         }
         public static void RemoveCursor()
         {
-            C.outb(0x3D4, 14);
-            C.outb(0x3D5, 0x07);
-            C.outb(0x3D4, 15);
-            C.outb(0x3D5, 0xD0);
+            CIO.outb(0x3D4, 14);
+            CIO.outb(0x3D5, 0x07);
+            CIO.outb(0x3D4, 15);
+            CIO.outb(0x3D5, 0xD0);
         }
     }
 }

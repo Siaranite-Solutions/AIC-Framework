@@ -1,7 +1,7 @@
 /*
 Copyright (c) 2012-2013, dewitcher Team
-Copyright (c) 2017, Apollo OS
-Copyright (c) 2017, Cosmos
+Copyright (c) 2019, Siaranite Solutions
+Copyright (c) 2019, Cosmos
 
 All rights reserved.
 
@@ -10,13 +10,20 @@ See in the /Licenses folder for the licenses for each respected project.
 
 using System;
 using System.Collections.Generic;
+using AB = AIC_Framework.AConsole.VideoRAM;
 
-// That's the super secret dewitcher event log
 namespace AIC_Framework.dev
 {
     public static class Log
     {
+        /// <summary>
+        /// Is the Log list initialized?
+        /// </summary>
         private static bool initialized = false;
+
+        /// <summary>
+        /// Lists declaration of the calling class, category and description
+        /// </summary>
         private static List<string> cc, cg, ds;
         /// <summary>
         /// Please use the following formatting for callingclass:
@@ -33,11 +40,17 @@ namespace AIC_Framework.dev
             cg.Add(category);
             ds.Add(description);
         }
+
+#warning TODO: Work on implementation if needed
+        /// <summary>
+        /// Get the entries of the calling class
+        /// </summary>
+        /// <param name="category"></param>
         public static void GetEntries(string category)
         {
             if (!initialized) init();
             // Save current console state
-            AConsole.VideoRAM.SetContent("__internal:logbackup");
+            AB.PushContents();
             // Write the entries
             int max = Console.WindowHeight - 4;
             int found = 0;
@@ -48,20 +61,25 @@ namespace AIC_Framework.dev
                 {
                     for (int i = found; i < cc.Count; i++)
                     {
-
+                        if (category == category[i].ToString())
+                        {
+                            AConsole.WriteLine(ds[i].ToString());
+                        }
                     }
                 }
             }
+            AConsole.WriteLine("Press any key to continue...");
+            AConsole.ReadKey(true);
+            AB.PopContents();
         }
         public static void Test()
         {
-            AddEntry("dewitcher.dev.Log.crap", "crap", "that's some crap");
-            AddEntry("dewitcher.dev.Log.crap", "crap", "that's some crap too");
-            AddEntry("dewitcher.dev.Log.crap", "crap", "that's some crap loo");
-            AddEntry("dewitcher.dev.Log.crap", "crap", "that's some crap =P");
-            AddEntry("dewitcher.dev.Log.crap", "crap", "that's some crap yeah");
-            AddEntry("dewitcher.dev.Log.crap", "crap", "that's some crappppppp");
-            GetEntries("crap");
+            AddEntry("aic.dev.Log.foo", "foo", "that's some foobar");
+            AddEntry("aic.dev.Log.foo", "foo", "that's some foobar too");
+            AddEntry("aic.dev.Log.foo", "foo", "foobar fighters");
+            AddEntry("aic.dev.Log.foo", "foo", "that's some foobar fighter");
+            AddEntry("aic.dev.Log.foo", "foo", "everybody loves foobar fighting");
+            GetEntries("foo");
         }
         private static void init()
         {

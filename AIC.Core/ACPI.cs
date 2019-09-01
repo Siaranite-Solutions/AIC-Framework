@@ -1,7 +1,7 @@
 ﻿/*
 Copyright (c) 2012-2013, dewitcher Team
-Copyright (c) 2017, Apollo OS
-Copyright (c) 2017, Cosmos
+Copyright (c) 2019, Siaranite Solutions
+Copyright (c) 2019, Cosmos
 
 All rights reserved.
 
@@ -15,7 +15,7 @@ using Cosmos.Core;
 
 namespace AIC.Core
 {
-    // You'll have so much fun while reading that code xP
+    // Adapted from an existing ACPI driver written in C
     public static unsafe class ACPI
     {
         internal static int* SMI_CMD;
