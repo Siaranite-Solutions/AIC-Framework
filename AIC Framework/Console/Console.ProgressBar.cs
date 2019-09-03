@@ -19,73 +19,90 @@ namespace AIC_Framework
     {
         public class ProgressBar
         {
-            private bool flicker = true;
+            /// <summary>
+            /// CursorTop
+            /// </summary>
+            int CT = AConsole.CursorTop;
+
+            /// <summary>
+            /// CursorLeft
+            /// </summary>
+            int CL = AConsole.CursorLeft;
+
+            /// <summary>
+            /// The value of the progress bar
+            /// </summary>
             private int value = 0;
+
+            /// <summary>
+            /// 
+            /// </summary>
             public int Value
             {
                 get { return value; }
                 set
                 {
-                    if (value >= 0 && value <= 100)
+                    if (value >= 0 && value <= 20)
                     {
                         this.value = value;
                     }
                 }
             }
+
             /// <summary>
             /// Initialize a new ProgressBar
             /// </summary>
             /// <param name="startValue">Value</param>
             /// <param name="Flicker">true = Very cool effect =)</param>
-            public ProgressBar(int startValue, bool Flicker = false)
+            public ProgressBar(int startValue)
             {
-                this.Value = startValue;
-                this.flicker = Flicker;
-                this.Refresh();
+                Value = startValue;
+                Refresh();
             }
+
+            /// <summary>
+            /// Increment the status of the progress bar
+            /// </summary>
             public void Increment()
             {
-                this.Value++;
-                this.Refresh();
+                Value++;
+                //Refresh();
             }
+
+            /// <summary>
+            /// Decrement the status of the progress bar
+            /// </summary>
             public void Decrement()
             {
-                this.Value--;
-                this.Refresh();
+                Value--;
+                Refresh();
             }
+
             /// <summary>
             /// INFO: MaxValue is 100 and MinValue is 0.
             /// </summary>
-            /// <param name="value"></param>
             public void Draw()
             {
-                int ct = AConsole.CursorTop;
-                int cl = AConsole.CursorLeft;
                 AConsole.WriteLine();
-                string buffer = "[                                                  ] ";
+                string buffer = "[          ]";
                 AConsole.Write(buffer);
-                AConsole.CursorLeft = cl + 1;
-                if (flicker)
+                AConsole.CursorLeft = CL + 1;
+
+                string __buffer = "";
+
+                for (int i = 0; i < this.value; i++)
                 {
-                    for (int i = 0; i < this.value / 2; i++)
-                    {
-                        if (this.value / 2 <= 50) AConsole.Write("=");
-                    }
+                    __buffer += "=";
                 }
-                else
-                {
-                    string __buffer = "";
-                    for (int i = 0; i < this.value / 2; i++)
-                    {
-                        if (this.value / 2 <= 50) __buffer += "=";
-                    }
-                    AConsole.Write(__buffer);
-                }
-                AConsole.CursorLeft = cl + 54;
-                AConsole.Write(this.value.ToString() + "%");
-                AConsole.CursorTop = ct;
-                AConsole.CursorLeft = cl;
+
+                AConsole.Write(__buffer);
+
+                AConsole.CursorLeft = CL + 14;
+                AConsole.Write(this.value.ToString() + "0%");
+                AConsole.CursorTop = CT;
+                AConsole.CursorLeft = CL;
             }
+
             private void Refresh()
             {
                 this.Draw();
