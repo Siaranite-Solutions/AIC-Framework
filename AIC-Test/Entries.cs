@@ -14,8 +14,7 @@ namespace AICTest
         public override void Execute()
         {
             Console.Clear();
-            Console.WriteLine("Press any key to shutdown...");
-            Console.ReadKey(true);
+            KernelExtensions.PressAnyKey("Press any key to shutdown...");
             userACPI.Shutdown();
         }
     }
@@ -25,8 +24,7 @@ namespace AICTest
         public override void Execute()
         {
             Console.Clear();
-            Console.WriteLine("Press any key to reboot...");
-            Console.ReadKey(true);
+            KernelExtensions.PressAnyKey("Press any key to reboot...");
             userACPI.Reboot();
         }
     }
@@ -37,7 +35,7 @@ namespace AICTest
         {
             Console.Clear();
             Console.WriteLine("Apollo Test Entry");
-            Console.ReadKey(true);
+            KernelExtensions.PressAnyKey();
             Console.Clear();
             // Place the code that should be executed here
         }
@@ -51,9 +49,8 @@ namespace AICTest
         {
             Console.Clear();
             Console.WriteLine("Hello World!");
-            Console.WriteLine("Press any key to continue...");
-            Console.ReadKey(true);
-
+            KernelExtensions.PressAnyKey();
+            Console.Clear();
             // Place the code that should be executed here
         }
     }
@@ -64,8 +61,7 @@ namespace AICTest
         public override void Execute()
         {
             Console.Clear();
-            Console.WriteLine("Press any key to start a test Stop Error");
-            Console.ReadKey(true);
+            KernelExtensions.PressAnyKey("Press any key to start a test Stop Error");
             try
             {
                 int a = 0;
@@ -77,6 +73,19 @@ namespace AICTest
                 AIC.Main.Bluescreen.Init(ex, true);
                 // Place the code that should be executed here
             }
+            Console.Clear();
+        }
+    }
+
+    public class CryptoSHA256 : menu.Entry
+    {
+        public CryptoSHA256() { this.text = "SHA256 Test"; }
+
+        public override void Execute()
+        {
+            Console.WriteLine("Enter string to be hashed using SHA256");
+            StringExtensions.SHA256(Console.ReadLine());
+            Console.Clear();
         }
     }
 }

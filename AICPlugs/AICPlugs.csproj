@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
@@ -8,14 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cosmos.Core" Version="0-*" NoWarn="NU1604" />
+    <PackageReference Include="Cosmos.Core" Version="0.1.0-localbuild20210526122829" NoWarn="NU1604" />
     <PackageReference Include="Cosmos.HAL2" Version="0-*" NoWarn="NU1604" />
     <PackageReference Include="Cosmos.System2" Version="0-*" NoWarn="NU1604" />
     <PackageReference Include="IL2CPU.API" Version="0-*" NoWarn="NU1604" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AIC Framework\AIC.Main.csproj" />
+    <ProjectReference Include="..\AIC.Main\AIC.Main.csproj" />
   </ItemGroup>
 
 </Project>

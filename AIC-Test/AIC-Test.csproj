@@ -18,9 +18,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Cosmos.Build" Version="*" NoWarn="NU1604" />
-        <PackageReference Include="Cosmos.Debug.Kernel" Version="*" NoWarn="NU1604" />
-        <PackageReference Include="Cosmos.System2" Version="*" NoWarn="NU1604" />
+        <PackageReference Include="Cosmos.Build" Version="0-*" NoWarn="NU1604" />
+        <PackageReference Include="Cosmos.Debug.Kernel" Version="0-*" NoWarn="NU1604" />
+        <PackageReference Include="Cosmos.System2" Version="0-*" NoWarn="NU1604" />
     </ItemGroup>
 	
     <ItemGroup>
@@ -28,7 +28,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AIC Framework\AIC.Main.csproj" />
+      <ProjectReference Include="..\AIC.Main\AIC.Main.csproj" />
     </ItemGroup>
 
 </Project>

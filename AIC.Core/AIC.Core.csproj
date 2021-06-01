@@ -20,6 +20,7 @@
   <ItemGroup>
 	<PackageReference Include="Cosmos.Debug.Kernel" Version="0-*" NoWarn="NU1604" />
 	<PackageReference Include="Cosmos.System2" Version="0-*" NoWarn="NU1604" />
+	<PackageReference Include="Cosmos.Core" Version="0.1.0-localbuild20210526122829" NoWarn="NU1604" />
   </ItemGroup>
 
 </Project>
