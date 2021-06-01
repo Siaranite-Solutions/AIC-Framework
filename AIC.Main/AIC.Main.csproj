@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="AIC_FrameworkBoot.Cosmos" />
+    <None Remove="AIC.MainBoot.Cosmos" />
   </ItemGroup>
   
   <ItemGroup>
