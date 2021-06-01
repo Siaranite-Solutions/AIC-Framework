@@ -1,7 +1,7 @@
 ﻿using System;
 using IL2CPU.API.Attribs;
 using Cosmos.Core;
-using AIC_Framework;
+using AIC.Main;
 using static Cosmos.Core.INTs;
 
 namespace AICPlugs

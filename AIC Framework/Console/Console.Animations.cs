@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using AIC.Core;
 
-namespace AIC_Framework
+namespace AIC.Main
 {
     public static partial class AConsole
     {

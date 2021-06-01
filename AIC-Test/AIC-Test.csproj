@@ -28,7 +28,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AIC Framework\AIC Framework.csproj" />
+      <ProjectReference Include="..\AIC Framework\AIC.Main.csproj" />
     </ItemGroup>
 
 </Project>

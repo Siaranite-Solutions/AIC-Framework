@@ -10,7 +10,7 @@ See in the /Licenses folder for the licenses for each respected project.
 
 using System;
 
-namespace AIC_Framework
+namespace AIC.Main
 {
     public static partial class AConsole
     {

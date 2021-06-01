@@ -10,9 +10,9 @@ See in the /Licenses folder for the licenses for each respected project.
 
 using System;
 using System.Collections.Generic;
-using AB = AIC_Framework.AConsole.VideoRAM;
+using AB = AIC.Main.AConsole.VideoRAM;
 
-namespace AIC_Framework.dev
+namespace AIC.Main.dev
 {
     public static class Log
     {

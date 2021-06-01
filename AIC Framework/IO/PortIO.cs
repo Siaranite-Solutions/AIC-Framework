@@ -26,7 +26,7 @@ using System;
 using System.Collections.Generic;
 using AIC.Core;
 
-namespace AIC_Framework.IO
+namespace AIC.Main.IO
 {
     public static class PortIO
     {

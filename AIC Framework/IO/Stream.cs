@@ -27,7 +27,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace AIC_Framework.IO
+namespace AIC.Main.IO
 {
     public abstract class Stream
     {

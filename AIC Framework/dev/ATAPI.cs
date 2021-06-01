@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using C = AIC.Core.IO.PortIO;
 
-namespace AIC_Framework.dev
+namespace AIC.Main.dev
 {
     public static class ATAPI
     {

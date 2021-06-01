@@ -11,7 +11,7 @@ See in the /Licenses folder for the licenses for each respected project.
 using System;
 using System.Collections.Generic;
 // IDT code by Grunt
-namespace AIC_Framework
+namespace AIC.Main
 {
     public class IDT
     {

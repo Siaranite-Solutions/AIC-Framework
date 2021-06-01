@@ -29,7 +29,7 @@ using System.Text;
 using AIC.Core.IO;
 // Splitty was here
 /*
-namespace AIC_Framework.IO
+namespace AIC.Main.IO
 {
     public class MemoryStream
     {

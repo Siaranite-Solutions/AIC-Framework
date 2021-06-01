@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AIC_Framework.Crypto
+namespace AIC.Main.Crypto
 {
     /// <summary>
     /// Thanks to Aurora01!
@@ -25,9 +25,9 @@ namespace AIC_Framework.Crypto
         /// </summary>
         /// <param name="str"></param>
         /// <returns>Hash MD5</returns>
-        public static string hash(string str)
+        public static string Hash(string input)
         {
-            Value = str;
+            Value = input;
             return FingerPrint;
         }
 

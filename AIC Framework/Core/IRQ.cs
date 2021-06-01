@@ -11,7 +11,7 @@ See in the /Licenses folder for the licenses for each respected project.
 using System;
 using System.Collections.Generic;
 //Some code was used in GruntTheDivine's infinity kernel. He gave permission for it to be made public.
-namespace AIC_Framework
+namespace AIC.Main
 {
     public class IRQ
     {

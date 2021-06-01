@@ -9,11 +9,11 @@ See in the /Licenses folder for the licenses for each respected project.
 */
 
 using System;
-using AIC_Framework;
+using AIC.Main;
 using AIC.Core;
 using IO = AIC.Core.IO;
 
-namespace AIC_Framework
+namespace AIC.Main
 {
     public static class PIT
     {

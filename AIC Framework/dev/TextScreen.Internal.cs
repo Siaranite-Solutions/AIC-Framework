@@ -15,7 +15,7 @@ using System.Text;
 using AIC.Core.dev;
 using CIO = AIC.Core.IO.PortIO;
 
-namespace AIC_Framework.dev
+namespace AIC.Main.dev
 {
     public partial class TextScreen
     {

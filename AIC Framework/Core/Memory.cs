@@ -10,10 +10,10 @@ See in the /Licenses folder for the licenses for each respected project.
 
 using System;
 using System.Collections.Generic;
-using AIC_Framework;
+using AIC.Main;
 using AIC.Core;
 
-namespace AIC_Framework
+namespace AIC.Main
 {
     public static class Memory
     {

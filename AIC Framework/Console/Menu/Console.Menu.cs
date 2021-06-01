@@ -11,7 +11,7 @@ See in the /Licenses folder for the licenses for each respected project.
 using System;
 using System.Collections.Generic;
 
-namespace AIC_Framework
+namespace AIC.Main
 {
     public static partial class AConsole
     {
@@ -47,10 +47,10 @@ namespace AIC_Framework
                     arrow = colors[4];
                 }
                 else if (colors.Length < 5)
-                    AIC_Framework.Bluescreen.Init("INVALID_THEME_EXCEPTION",
+                    AIC.Main.Bluescreen.Init("INVALID_THEME_EXCEPTION",
                     "Looks like your ConsoleColor-Array contains less than 5 entries");
                 else if (colors.Length > 5)
-                    AIC_Framework.Bluescreen.Init("INVALID_THEME_EXCEPTION",
+                    AIC.Main.Bluescreen.Init("INVALID_THEME_EXCEPTION",
                     "Looks like your ConsoleColor-Array contains more than 5 entries");
             }
             public static void AddCategory(Category category) { cat.Add(category); }

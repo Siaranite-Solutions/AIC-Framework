@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using Cosmos.HAL;
 
-namespace AIC_Framework
+namespace AIC.Main
 {
     // INFO: We recommend to set the keylayout in the BeforeRun() method to make sure that
     //       the arrow keys does not appear as a pretty fuckedup random unicode char..

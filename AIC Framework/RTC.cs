@@ -9,10 +9,10 @@ See in the /Licenses folder for the licenses for each respected project.
 */
 
 using System;
-using AIC_Framework.Extensions;
+using AIC.Main.Extensions;
 using AIC.Hardware;
 
-namespace AIC_Framework
+namespace AIC.Main
 {
     public static class RTC
     {

@@ -28,7 +28,7 @@ using System.Linq;
 using System.Text;
 using AIC.Core.IO;
 
-namespace AIC_Framework.IO
+namespace AIC.Main.IO
 {
     public class BinaryWriter
     {

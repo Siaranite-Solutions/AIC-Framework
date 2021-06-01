@@ -10,7 +10,7 @@ See in the /Licenses folder for the licenses for each respected project.
 
 using System;
 
-namespace AIC_Framework.Crypto
+namespace AIC.Main.Crypto
 {
     /// <summary>
     /// Rot13

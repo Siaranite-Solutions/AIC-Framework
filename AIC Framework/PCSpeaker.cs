@@ -15,7 +15,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AIC.Core;
 
-namespace AIC_Framework
+namespace AIC.Main
 {
     public class PCSpeaker
     {

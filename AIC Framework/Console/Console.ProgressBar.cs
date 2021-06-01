@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace AIC_Framework
+namespace AIC.Main
 {
     public static partial class AConsole
     {

@@ -12,7 +12,7 @@ using System;
 using System.Text;
 using AIC.Core;
 
-namespace AIC_Framework
+namespace AIC.Main
 {
     public class userACPI
     {

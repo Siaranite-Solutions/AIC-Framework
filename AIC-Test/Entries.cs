@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using AIC_Framework;
-using AIC_Framework.Extensions;
-using Console = AIC_Framework.AConsole;
-using menu = AIC_Framework.AConsole.Menu;
+using AIC.Main;
+using AIC.Main.Extensions;
+using Console = AIC.Main.AConsole;
+using menu = AIC.Main.AConsole.Menu;
 
 namespace AICTest
 {
@@ -74,7 +74,7 @@ namespace AICTest
             }
             catch (Exception ex)
             {
-                AIC_Framework.Bluescreen.Init(ex, true);
+                AIC.Main.Bluescreen.Init(ex, true);
                 // Place the code that should be executed here
             }
         }

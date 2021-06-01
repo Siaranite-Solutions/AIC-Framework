@@ -11,7 +11,7 @@ See in the /Licenses folder for the licenses for each respected project.
 using System;
 using System.Collections.Generic;
 
-namespace AIC_Framework
+namespace AIC.Main
 {
     // For use instead of using System.Console directly, but still calls System.Console
 
