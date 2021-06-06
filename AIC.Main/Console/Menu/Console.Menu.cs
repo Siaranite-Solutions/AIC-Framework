@@ -36,6 +36,7 @@ namespace AIC.Main
                 highlighted = ConsoleColor.White;
                 arrow = ConsoleColor.Yellow;
             }
+
             public static void ApplyThemePack(ConsoleColor[] colors)
             {
                 if (colors.Length == 5)
@@ -57,7 +58,14 @@ namespace AIC.Main
             public static void Show()
             {
                 Console.Clear();
+                
+                fill = ConsoleColor.Cyan;
+                background = ConsoleColor.Green;
+                normal = ConsoleColor.Black;
+                highlighted = ConsoleColor.White;
+                arrow = ConsoleColor.Yellow;
                 Fill(fill);
+
                 while (true)
                 {
                     if (recovery == true) break;

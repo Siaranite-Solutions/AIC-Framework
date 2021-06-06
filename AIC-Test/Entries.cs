@@ -13,8 +13,6 @@ namespace AICTest
         public ShutdownEntry() { this.text = "Shutdown"; }
         public override void Execute()
         {
-            Console.Clear();
-            KernelExtensions.PressAnyKey("Press any key to shutdown...");
             userACPI.Shutdown();
         }
     }
@@ -23,8 +21,6 @@ namespace AICTest
         public RebootEntry() { this.text = "Reboot"; }
         public override void Execute()
         {
-            Console.Clear();
-            KernelExtensions.PressAnyKey("Press any key to reboot...");
             userACPI.Reboot();
         }
     }
@@ -36,7 +32,6 @@ namespace AICTest
             Console.Clear();
             Console.WriteLine("Apollo Test Entry");
             KernelExtensions.PressAnyKey();
-            Console.Clear();
             // Place the code that should be executed here
         }
     }
@@ -50,30 +45,25 @@ namespace AICTest
             Console.Clear();
             Console.WriteLine("Hello World!");
             KernelExtensions.PressAnyKey();
-            Console.Clear();
             // Place the code that should be executed here
         }
     }
 
     public class Bluescreen : menu.Entry
     {
+        public static int breakme()
+        {
+            int num = 0;
+            int val = 0;
+            int number = (((val / num) / val) / num);
+            return number;
+        }
         public Bluescreen() { this.text = "Bluescreen test"; }
         public override void Execute()
         {
             Console.Clear();
             KernelExtensions.PressAnyKey("Press any key to start a test Stop Error");
-            try
-            {
-                int a = 0;
-                int b = 10;
-                Console.WriteLine((b / a).ToString());
-            }
-            catch (Exception ex)
-            {
-                AIC.Main.Bluescreen.Init(ex, true);
-                // Place the code that should be executed here
-            }
-            Console.Clear();
+            Console.WriteLine(breakme().ToString());
         }
     }
 
@@ -84,8 +74,9 @@ namespace AICTest
         public override void Execute()
         {
             Console.WriteLine("Enter string to be hashed using SHA256");
-            StringExtensions.SHA256(Console.ReadLine());
-            Console.Clear();
+            string hash = StringExtensions.SHA256(Console.ReadLine());
+            Console.WriteLine(hash);
+            KernelExtensions.PressAnyKey();
         }
     }
 }
