@@ -15,7 +15,7 @@ namespace AICTest
         protected override void BeforeRun()
         {
             Console.Clear();
-            Bootscreen.Show("AIC Demo!", Bootscreen.Effect.Typewriter, ConsoleColor.Green, 3);
+            Bootscreen.Show("AIC Demo!", Bootscreen.Effect.Matrix, ConsoleColor.Green, 3);
             Console.Clear();
             menu.Reset();
         }
@@ -34,9 +34,18 @@ namespace AICTest
             catAICTests.AddEntry(new RebootEntry());
             catAICTests.AddEntry(new Bluescreen());
 
+            menu.Category BootScreens = new menu.Category("BootScreen demos");
+            BootScreens.AddEntry(new Boot_SFT());
+            BootScreens.AddEntry(new Boot_SFR());
+            BootScreens.AddEntry(new Boot_SFB());
+            BootScreens.AddEntry(new Boot_SFL());
+            BootScreens.AddEntry(new Boot_TWR());
+            BootScreens.AddEntry(new Boot_Matrix());
+
             // Add the categories to the menu
             menu.AddCategory(catTest);
             menu.AddCategory(catAICTests);
+            menu.AddCategory(BootScreens);
 
             // Show the menu
             menu.Show();

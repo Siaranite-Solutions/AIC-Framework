@@ -22,9 +22,10 @@ namespace AIC.Main
         /// <param name="ticks">Amount</param>
         public static void SleepTicks(int ticks)
         {
-            for (int i = 0; i < ticks; i++) { ;} return;
+            for (int i = 0; i < ticks; i++) {; }
+            return;
         }
-        
+
         public static class Now
         {
             /// <summary>
@@ -151,6 +152,21 @@ namespace AIC.Main
                     return "ERROR";
             }
         }
+
+        public static void Sleep(int secNum)
+        {
+            int StartSec = Now.Second;
+            int EndSec;
+
+            if (StartSec + secNum > 59)
+                EndSec = 0;
+            else
+                EndSec = StartSec + secNum;
+
+            // Loop round
+            while (Now.Second != EndSec) ;
+        }
+
         /// <summary>
         /// Function that tries to set the numbers length to 2
         /// </summary>

@@ -9,6 +9,7 @@ See in the /Licenses folder for the licenses for each respected project.
 */
 
 using System;
+using AIC.Core;
 
 namespace AIC.Hardware
 {
@@ -23,6 +24,11 @@ namespace AIC.Hardware
             for (int i = 0; i < ticks; i++) { ;} return;
         }
         
+        public static void PITSleep(uint ms)
+        {
+            PIT.SleepMilliseconds(ms);
+        }
+
         public static class Now
         {
             /// <summary>
@@ -74,6 +80,7 @@ namespace AIC.Hardware
             /// Returns the day of the month
             /// </summary>
             public static byte DayOfTheMonth { get { return Cosmos.HAL.RTC.DayOfTheMonth; } }
+
             /// <summary>
             /// Returns the day of the month in format xx ( x = any number )
             /// </summary>
@@ -83,6 +90,7 @@ namespace AIC.Hardware
             /// Returns the day of the year
             /// </summary>
             public static byte DayOfTheYear { get { return ((byte)(DayOfTheMonth * Month)); } }
+
             /// <summary>
             /// Returns the day of the year in format xxx ( x = any number )
             /// </summary>
@@ -92,6 +100,7 @@ namespace AIC.Hardware
             /// Returns the day of the week
             /// </summary>
             public static byte DayOfTheWeek { get { return Cosmos.HAL.RTC.DayOfTheWeek; } }
+
             /// <summary>
             /// Returns the day of the week in format xx ( x = any number )
             /// </summary>
@@ -101,6 +110,7 @@ namespace AIC.Hardware
             /// Returns the month
             /// </summary>
             public static byte Month { get { return Cosmos.HAL.RTC.Month; } }
+
             /// <summary>
             /// Returns the month in format xx ( x = any number )
             /// </summary>
@@ -110,6 +120,7 @@ namespace AIC.Hardware
             /// DateFormat
             /// </summary>
             public enum DateFormat : byte { YYYY_MM_DD, DD_MM_YYYY, MM_DD_YYYY, YYYY_DD_MM }
+
             /// <summary>
             /// Returns the date in the specified date format
             /// </summary>
@@ -133,6 +144,7 @@ namespace AIC.Hardware
             /// TimeFormat
             /// </summary>
             public enum TimeFormat : byte { hh_mm, hh_mm_ss, mm_ss }
+
             /// <summary>
             /// Returns the time in the specified time format
             /// </summary>

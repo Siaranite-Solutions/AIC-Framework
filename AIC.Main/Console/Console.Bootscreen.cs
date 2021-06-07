@@ -45,7 +45,6 @@ namespace AIC.Main
             {
                 case Effect.SlideFromLeft:
                     debugger.Send("slide-from-left");
-                    // Only used while debugging! - KernelExtensions.PressAnyKey();
                     for (int i = 0; i < ((AConsole.WindowWidth / 2) - (OSname.Length / 2)); i++)
                     {
                         AConsole.Clear();
@@ -54,59 +53,52 @@ namespace AIC.Main
                         for (int x = 0; x < i; x++) fill += " ";
                         AConsole.Write(fill);
                         AConsole.Write(OSname, color, false, true);
-                        System.Threading.Thread.Sleep(ms_sleep);
+                        RTC.Sleep(ms_sleep);
                     }
                     break;
                 case Effect.SlideFromRight:
                     debugger.Send("slide-from-right");
-                    // Only used while debugging! - KernelExtensions.PressAnyKey();
                     for (int i = (AConsole.WindowWidth - OSname.Length);
                         i > ((AConsole.WindowWidth / 2) - (OSname.Length / 2)); i--)
                     {
                         AConsole.Clear();
                         AConsole.CursorLeft = i;
                         AConsole.Write(OSname, color, false, true);
-                        System.Threading.Thread.Sleep(ms_sleep);
+                        RTC.Sleep(ms_sleep);
                     }
                     break;
                 case Effect.SlideFromTop:
                     debugger.Send("slide-from-top");
-                    // Only used while debugging! -KernelExtensions.PressAnyKey();
                     for (int i = 0; i < (AConsole.WindowHeight / 2); i++)
                     {
                         AConsole.Clear();
                         AConsole.CursorTop = i;
                         AConsole.WriteLine(OSname, color, true, false);
-                        System.Threading.Thread.Sleep(ms_sleep);
+                        RTC.Sleep(ms_sleep);
                     }
                     break;
                 case Effect.SlideFromBottom:
                     debugger.Send("slide-from-bottom");
-                    // Only used while debugging! - KernelExtensions.PressAnyKey();
                     for (int i = (AConsole.WindowHeight - 1); i > (AConsole.WindowHeight / 2); i--)
                     {
                         AConsole.Clear();
                         AConsole.CursorTop = i;
                         AConsole.WriteLine(OSname, color, true, false);
-                        System.Threading.Thread.Sleep(ms_sleep);
+                        RTC.Sleep(ms_sleep);
                     }
                     break;
                 case Effect.Typewriter:
                     debugger.Send("typewriter");
-                    // Only used while debugging! - KernelExtensions.PressAnyKey();
                     AConsole.CursorLeft = ((AConsole.WindowWidth / 2) - (OSname.Length / 2));
                     foreach (char chr in OSname)
                     {
                         AConsole.Write(chr.ToString(), color, false, true);
-                        // Only used while debugging! - Extensions.KernelExtensions.PressAnyKey();
-                        System.Threading.Thread.Sleep(ms_sleep);
+                        RTC.Sleep(ms_sleep);
                     }
-                    // Only used while debugging! - KernelExtensions.PressAnyKey();
                     break;
 
                 case Effect.Matrix:
                     debugger.Send("matrix");
-                    // Only used while debugging! - KernelExtensions.PressAnyKey();
                     int sec1 = AIC.Hardware.RTC.Now.Second;
                     int sec2 = sec1;
                     do { sec2 = AIC.Hardware.RTC.Now.Second; } while (sec1 == sec2);

@@ -22,5 +22,9 @@
     <PackageReference Include="Cosmos.HAL2" Version="0-*" NoWarn="NU1604" />
     <PackageReference Include="Cosmos.System2" Version="0-*" NoWarn="NU1604" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\AIC.Core\AIC.Core.csproj" />
+  </ItemGroup>
 
 </Project>

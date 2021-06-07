@@ -79,4 +79,72 @@ namespace AICTest
             KernelExtensions.PressAnyKey();
         }
     }
+
+    public class Boot_SFT : menu.Entry
+    {
+        public Boot_SFT() { this.text = "Slide From Top"; }
+
+        public override void Execute()
+        {
+            Bootscreen.Show("AIC Demo!", Bootscreen.Effect.SlideFromTop, ConsoleColor.Green, 1);
+            Console.Clear();
+        }
+    }
+
+    public class Boot_SFR : menu.Entry
+    {
+        public Boot_SFR() { this.text = "Slide From Right"; }
+
+        public override void Execute()
+        {
+            Bootscreen.Show("AIC Demo!", Bootscreen.Effect.SlideFromRight, ConsoleColor.Green, 1);
+            Console.Clear();
+        }
+    }
+
+    public class Boot_SFB : menu.Entry
+    {
+        public Boot_SFB() { this.text = "Slide From Bottom"; }
+
+        public override void Execute()
+        {
+            Bootscreen.Show("AIC Demo!", Bootscreen.Effect.SlideFromBottom, ConsoleColor.Green, 1);
+            Console.Clear();
+        }
+    }
+
+    public class Boot_SFL : menu.Entry
+    {
+        public Boot_SFL() { this.text = "Slide From Left";  }
+
+        public override void Execute()
+        {
+            Bootscreen.Show("AIC Demo!", Bootscreen.Effect.SlideFromLeft, ConsoleColor.Green, 1);
+            Console.Clear();
+        }
+    }
+
+
+
+    public class Boot_TWR : menu.Entry
+    {
+        public Boot_TWR() { this.text = "Typewriter"; }
+
+        public override void Execute()
+        {
+            Bootscreen.Show("AIC Demo!", Bootscreen.Effect.Typewriter, ConsoleColor.Green, 2);
+            Console.Clear();
+        }
+    }
+
+    public class Boot_Matrix : menu.Entry
+    {
+        public Boot_Matrix() { this.text = "Matrix"; }
+
+        public override void Execute()
+        {
+            Bootscreen.Show("AIC Demo!", Bootscreen.Effect.Matrix, ConsoleColor.Green, 2);
+            Console.Clear();
+        }
+    }
 }
