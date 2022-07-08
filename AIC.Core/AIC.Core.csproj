@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.Net.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net5.0</TargetFramework>
+		<TargetFramework>net6.0</TargetFramework>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<ProjectGuid>{1c206f41-a435-44d7-8794-8754bf3e2fb5}</ProjectGuid>
 		<Configurations>Debug;Release;TEST</Configurations>
