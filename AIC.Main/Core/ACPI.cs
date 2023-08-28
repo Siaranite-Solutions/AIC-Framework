@@ -18,11 +18,11 @@ namespace AIC.Main
     {
         public static void Shutdown()
         {
-            ACPI.Shutdown();
+            Cosmos.System.Power.Shutdown();
         }
         public static void Reboot()
         {
-            ACPI.Reboot();
+            Cosmos.System.Power.Reboot();
         }
     }
 }

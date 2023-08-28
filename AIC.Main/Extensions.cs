@@ -67,7 +67,7 @@ namespace AIC.Main.Extensions
         /// <summary>
         /// Shuts down the computer running the OS
         /// </summary>
-        public static void Shutdown() { ACPI.Shutdown(); }
+        public static void Shutdown() { Cosmos.System.Power.Shutdown(); }
         public static void SleepSeconds(uint value) { AIC.Core.PIT.SleepSeconds(value); }
         public static void SleepMilliseconds(uint value) { AIC.Core.PIT.SleepMilliseconds(value); }
         /// <summary>

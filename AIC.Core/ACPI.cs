@@ -129,6 +129,8 @@ namespace AIC.Core
                 sum += *(check++);
             return (sum == 0);
         }
+        
+        /*
         internal static Cosmos.Core.IOPort smiIO, pm1aIO, pm1bIO;
         internal static bool Enable()
         {
@@ -251,7 +253,7 @@ namespace AIC.Core
                     pm1bIO.Word = (ushort)(SLP_TYPb | SLP_EN);
             }
             Console.WriteLine("Its now safe to turn off the computer.");
-        }
+        }*/
         /// <summary>
         /// Reboot
         /// </summary>

@@ -63,7 +63,7 @@ namespace AIC.Main
                 AConsole.WriteLineEx("If it doesn't work, press the RESET-button on your computer.", ConsoleColor.White, ConsoleColor.Blue);
                 AConsole.CursorTop++;
                 AConsole.ReadLine();
-                ACPI.Shutdown();
+                Cosmos.System.Power.Shutdown();
             }
         }
         public static void Init(Exception ex, bool critical = false)
@@ -103,7 +103,7 @@ namespace AIC.Main
                 AConsole.WriteEx("If it doesn't work, press the RESET-button on your computer.", ConsoleColor.White, ConsoleColor.Blue);
                 AConsole.CursorTop++;
                 AConsole.ReadLine();
-                ACPI.Shutdown();
+                Cosmos.System.Power.Shutdown();
             }
         }
         private static void DrawOOPS()
