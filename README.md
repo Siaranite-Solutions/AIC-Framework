@@ -1,4 +1,10 @@
-# AIC Framework
+# DEPRECATED
+The AIC Framework has now been merged into the [Medli Operating System](https://www.github.com/Siaranite-Solutions/Medli),
+as they both share a significant amount of codebase and it has become increasingly devoid of any value to manage the two repositories simulatenously.
+
+---
+
+## AIC Framework
 The **A**pollo **I**nter-project **C**omponent **Framework** for Cosmos C# operating systems, based on Dewitcher and Dewitcher 2 framework.  
 This framework allows a base of common tools to be used within the operating systems, allowing for easier manageability and changing of components in the future when needed.   
   
